@@ -373,19 +373,18 @@ footer .ourBrands .carousell-ourBrands {
 footer .bottom {
   background-color: #9E2B87;
   margin-top: 100px;
+}
+
+footer .bottom .bottom-content {
+  width: 80%;
+  margin: auto;
+  padding: 50px 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
 }
 
-footer .bottom .column-bottom {
+footer .bottom .bottom-content .column-bottom {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -396,7 +395,19 @@ footer .bottom .column-bottom {
   width: 25%;
 }
 
-footer .bottom .column-bottom img {
-  width: auto;
+footer .bottom .bottom-content .column-bottom img {
+  height: 50px;
+  width: 120px;
+}
+
+footer .bottom .bottom-content .column-bottom a {
+  font-size: 1.2rem;
+  text-decoration: none;
+  color: #ffffff;
+  padding: 5px 15px;
+}
+
+footer .bottom .bottom-content .column-bottom p {
+  color: #ffffff;
 }
 /*# sourceMappingURL=styles.css.map */

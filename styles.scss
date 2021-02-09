@@ -396,20 +396,32 @@ footer{
     .bottom{
         background-color: $-purple;
         margin-top: 100px;
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-
-        .column-bottom{
+        
+        // justify-content: space-between;
+        .bottom-content{
+            @include width-margin();
+            padding: 50px 0;
             display: flex;
-            flex-direction: column;
-            width: 25%;
-            img{
-                // height: 50px;
-                width: auto;
-            }
-            a{
 
+
+
+            .column-bottom{
+                display: flex;
+                flex-direction: column;
+                width: 25%;
+                img{
+                    height: 50px;
+                    width: 120px;
+                }
+                a{
+                    font-size: 1.2rem;
+                    text-decoration: none;
+                    color: $-white;
+                    padding: 5px 15px;
+                }
+                p{
+                    color: $-white;
+                }
             }
         }
     }
