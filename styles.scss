@@ -57,7 +57,7 @@ html {
     font-family: 'Montserrat', sans-serif;
 }
 h1, h2, h3, h4{
-    font-family: Monserrat, Arial, Helvetica, sans-serif;
+    font-family: 'Montserrat', Arial, Helvetica, sans-serif;
 
 }
 h1{
@@ -275,7 +275,7 @@ nav {
 .featuredProducts{
     @include width-margin();
     .section-title{
-        margin-top: 70px;
+        margin-top: 110px;
         display: flex;
         flex-wrap: wrap;
         border-bottom: $-turquoise solid 5px;
@@ -291,11 +291,12 @@ nav {
     }
     .featured-product{
         display: flex;
-        justify-content: space-around;
-        margin-top: 50px;
+        justify-content: center;
+        margin-top: 100px;
 
         .product-container{
-           position: relative;
+            margin: 0 40px;
+            position: relative;
             width: 343px;
             height: 300px;
             border-radius: 10px;
@@ -370,9 +371,8 @@ nav {
 // LATEST PRODUCTS
 .latestProducts{
     @include width-margin();
-    margin-top: 120px;
+    margin-top: 150px;
     .section-title{
-        margin-top: 70px;
         display: flex;
         flex-wrap: wrap;
         border-bottom: $-purple solid 5px;
@@ -386,13 +386,13 @@ nav {
         }
     }
     .latest-product{
-        
         display: flex;
-        justify-content: space-around;
-        margin-top: 50px;
+        justify-content: center;
+        margin-top: 100px;
 
         .product-container{
-           position: relative;
+            margin: 0 40px;
+            position: relative;
             width: 343px;
             height: 300px;
             border-radius: 10px;
@@ -507,11 +507,12 @@ footer{
                     font-size: 1.2rem;
                     text-decoration: none;
                     color: $-white;
-                    padding: 5px 15px;
+                    padding: 10px 15px;
+
                 }
                 p{
                     color: $-white;
-                    
+                    line-height: 2.5;
                 }
             }
         }
