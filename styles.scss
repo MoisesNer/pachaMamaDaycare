@@ -68,75 +68,98 @@ h2{
             font-size: 25px;
 }
 // NAV BAR
-nav{
-    background-color: $-white;
-    -webkit-box-shadow: 0px 5px 40px -10px rgba(0,0,0,0.3);
-
+nav {
+    background-color: #ffffff;
+    -webkit-box-shadow: 0px 5px 40px -10px rgba(0, 0, 0, 0.3);
+   box-shadow: 0px 5px 40px -10px rgba(0, 0, 0, 0.3);
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: space-around;
-    align-items: center;
-    padding: 10px 0; 
-    position: fixed; /* Set the navbar to fixed position */
-    top: 0; /* Position the navbar at the top of the page */
-    width: 100%;
-    z-index: 100;
-
-    .logoNav{
-        width: 50px;
-        img{
-            width: 130px;
-        }
-
-    }
-   
-    
-    .nav-ul{
-        list-style: none;
-        padding: 0;
-        li{
-            display: inline-block;
-            a{
-                font-size: 1.2rem;
-                text-decoration: none;
-                color: $-notBlack;
-                padding: 5px 15px;
-
-            }
-        }
-    }
-
-
-    .nav-icons{
-        list-style: none;
-        padding: 0;
-        width: 10%;
-        display: flex;
+    -ms-flex-pack: distribute;
         justify-content: space-around;
-
-        li{
-            display: inline-block;
-            background-color: $-blue;
-            border-radius: 50%;
-            width: 45px;
-            height: 45px;
-            text-align: center;
-            line-height: 2.8rem;
-
-            a{
-                font-size: 1.3rem;
-                color: $-white;
-                
-            }
-        }
-        li:nth-child(2){
-            background-color: $-pink;
-        }
-        li:nth-child(3){
-            background-color: $-yellowDarker;
-        }
-
-    }
-}
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    padding: 10px 0;
+    position: fixed;
+    /* Set the navbar to fixed position */
+    top: 0;
+    /* Position the navbar at the top of the page */
+    width: 100%;
+  }
+  .nav-section{
+    width:30%;
+    display:flex;
+    justify-content:space-between;
+  }
+  nav .logoNav {
+    width: 10%;
+    display: inline;
+  }
+  
+  nav .logoNav img {
+    width: 130px;
+  }
+  nav .burguerMenu{
+    visibility: hidden;
+    display:none;
+  }
+  nav .nav-ul {
+    list-style: none;
+    padding: 0;
+    width:50%;
+    margin:0 !important;
+    display:flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  nav .nav-ul li {
+    display: inline-block;
+    
+  }
+  
+  nav .nav-ul li a {
+    font-size: 1.2rem;
+    text-decoration: none;
+    color: #313131;
+    padding: 5px 15px;
+  }
+  
+  nav .nav-icons {
+    list-style: none;
+    padding: 0;
+  }
+  
+  nav .nav-icons li {
+    display: inline-block;
+    background-color: #1BA4FC;
+    border-radius: 50%;
+    width: 45px;
+    height: 45px;
+    text-align: center;
+    margin-right:18px;
+  }
+  
+  nav .nav-icons li a {
+    font-size: 1.8rem;
+    color: #ffffff;
+  }
+  .fas{
+    font-size:20px;
+    text-align:center;
+    padding-top:7px;
+  }
+  
+  nav .nav-icons li:nth-child(2) {
+    background-color: #DF1988;
+    margin-right:18px;
+  }
+  
+  nav .nav-icons li:nth-child(3) {
+    background-color: #F4CC2E;
+  }
 
 // HERO SECTION
 
