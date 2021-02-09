@@ -184,16 +184,14 @@ nav{
         margin-top: 70px;
         display: flex;
         flex-wrap: wrap;
-        border-bottom: $-turquoise solid 3px;
+        border-bottom: $-turquoise solid 5px;
         justify-content: space-between;
         align-items: center;
 
-        h2{
-            
-        }
         a{
             text-decoration: none;
             color: $-blue;
+            font-weight: bold;
         }
  
     }
@@ -211,7 +209,8 @@ nav{
             
             .category{
                 position: absolute;
-                right: 0;
+                right: 10px;
+                top: 10px;
 
                 a{
                     text-align: center;
@@ -235,8 +234,178 @@ nav{
             .product-info{
                 border-top: solid $-notBlack 2px;
                 margin: auto;
+                padding-top: 5px;
                 width: 313px;
                 
+                .price-qty{
+                    // display: flex;
+                    // flex-direction: row;
+                    // justify-content: space-between;
+                    
+
+                    p{
+                        text-align: right;
+                        position: absolute;
+                        right: 8px;
+                        bottom: 8px;
+                        width: 100px;
+                        font-weight: bold;
+                        // border: red solid 2px;
+
+                        background-color: $-yellow;
+                        padding: 6px;
+                        border-radius: 20px;
+                        
+                        
+                                                
+                        i{
+                            background-color: $-yellowDarker;
+                            color: $-white;
+                            padding: 7px;
+                            border-radius: 20px;
+                        }
+                    }
+                }
+            }
+            
+
+        }
+    }
+}
+
+// LATEST PRODUCTS
+.latestProducts{
+    @include width-margin();
+    margin-top: 120px;
+    .section-title{
+        margin-top: 70px;
+        display: flex;
+        flex-wrap: wrap;
+        border-bottom: $-purple solid 5px;
+        justify-content: space-between;
+        align-items: center;
+
+        a{
+            text-decoration: none;
+            color: $-blue;
+            font-weight: bold;
+        }
+    }
+    .latest-product{
+        
+        display: flex;
+        justify-content: space-around;
+        margin-top: 50px;
+
+        .product-container{
+           position: relative;
+            width: 343px;
+            height: 300px;
+            border-radius: 10px;
+            -webkit-box-shadow: 0px 5px 40px -10px rgba(0,0,0,0.3);
+            
+            .category{
+                position: absolute;
+                right: 10px;
+                top: 10px;
+
+                a{
+                    text-align: center;
+                    padding: 5px 10px;
+                    margin: auto;
+                    background-color: $-turquoise;
+                    color: $-white; 
+                    font-size: 15px;
+                    text-decoration: none;
+                    display: inline-block;
+                    border-radius: 5px;
+
+
+                }
+            }
+            img{
+                width: 313px;
+                height: 240px;
+            }
+            
+            .product-info{
+                border-top: solid $-notBlack 2px;
+                margin: auto;
+                padding-top: 5px;
+                width: 313px;
+                
+                .price-qty{
+                    p{
+                        text-align: right;
+                        position: absolute;
+                        right: 8px;
+                        bottom: 8px;
+                        width: 100px;
+                        font-weight: bold;
+                        
+
+                        background-color: $-yellow;
+                        padding: 6px;
+                        border-radius: 20px;
+                        
+                        
+                                                
+                        i{
+                            background-color: $-yellowDarker;
+                            color: $-white;
+                            padding: 7px;
+                            border-radius: 20px;
+                        }
+                    }
+                }
+            }
+            
+
+        }
+    }
+
+}
+
+// FOOTER
+footer{
+    margin-top: 120px;
+    background-color: $-yellow;
+    
+    .ourBrands{
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+
+        h2{
+            padding: 50px 0;
+        }
+
+        .carousell-ourBrands{
+            height: 30vh;
+            width: 100%;
+            border: red solid 2px;
+        }
+    }
+
+    .bottom{
+        background-color: $-purple;
+        margin-top: 100px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+
+        .column-bottom{
+            display: flex;
+            flex-direction: column;
+            width: 25%;
+            img{
+                // height: 50px;
+                width: auto;
+            }
+            a{
+
             }
         }
     }
