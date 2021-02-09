@@ -52,20 +52,20 @@
                     <a href="" class="account"><i class="fas fa-user"></i></a>               
                 </li>
                 <li>
-                    <a href="#" class="cart"><i class="fas fa-shopping-cart"></i></a>
+                    <a href="#" class="cart btn-open-popup" id="btn-open-popup"><i class="fas fa-shopping-cart"></i></a>
                 </li>
             </ul>
 
                 </nav>
-
-                <div class="popup-wrapper">
-                    <div class="popup">
-                        <div class="popup-close">x</div>
-                        <div class="popup-content">
-                            <h3>My Cart</h3>
-                            <p>¡No te pierdas las mejores ofertas de libros para aprender JavaScript!</p>
-                        </div>
+               <!-- <button id="btn-abrir-popup" class="btn-abrir-popup">Abrir Ventana Emergente</button>-->
+                <div class="overlay" id="overlay">
+                    <div class="popup" id="popup">
+                        <a href="#" id="btn-close-popup" class="btn-close-popup"><i class="fas fa-times"></i></a>
+                        <p class="my-cart">My Cart</p>
+                        
                     </div>
                 </div>
+
+                
         </body>
     </html>
