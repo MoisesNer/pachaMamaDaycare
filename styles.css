@@ -23,34 +23,65 @@ h2 {
 nav {
   background-color: #ffffff;
   -webkit-box-shadow: 0px 5px 40px -10px rgba(0, 0, 0, 0.3);
+  box-shadow: 0px 5px 40px -10px rgba(0, 0, 0, 0.3);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -ms-flex-pack: distribute;
-      justify-content: space-around;
+  justify-content: space-around;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   padding: 10px 0;
   position: fixed;
   /* Set the navbar to fixed position */
   top: 0;
   /* Position the navbar at the top of the page */
   width: 100%;
-  z-index: 100;
+}
+
+.nav-section {
+  width: 30%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
 nav .logoNav {
-  width: 50px;
+  width: 10%;
+  display: inline;
 }
 
 nav .logoNav img {
   width: 130px;
 }
 
+nav .burguerMenu {
+  visibility: hidden;
+  display: none;
+}
+
 nav .nav-ul {
   list-style: none;
   padding: 0;
+  width: 50%;
+  margin: 0 !important;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 nav .nav-ul li {
@@ -67,12 +98,6 @@ nav .nav-ul li a {
 nav .nav-icons {
   list-style: none;
   padding: 0;
-  width: 10%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
 }
 
 nav .nav-icons li {
@@ -82,16 +107,23 @@ nav .nav-icons li {
   width: 45px;
   height: 45px;
   text-align: center;
-  line-height: 2.8rem;
+  margin-right: 18px;
 }
 
 nav .nav-icons li a {
-  font-size: 1.3rem;
+  font-size: 1.8rem;
   color: #ffffff;
+}
+
+.fas {
+  font-size: 20px;
+  text-align: center;
+  padding-top: 7px;
 }
 
 nav .nav-icons li:nth-child(2) {
   background-color: #DF1988;
+  margin-right: 18px;
 }
 
 nav .nav-icons li:nth-child(3) {
@@ -196,6 +228,7 @@ nav .nav-icons li:nth-child(3) {
   height: 300px;
   border-radius: 10px;
   -webkit-box-shadow: 0px 5px 40px -10px rgba(0, 0, 0, 0.3);
+          box-shadow: 0px 5px 40px -10px rgba(0, 0, 0, 0.3);
 }
 
 .featuredProducts .featured-product .product-container .category {
@@ -291,6 +324,7 @@ nav .nav-icons li:nth-child(3) {
   height: 300px;
   border-radius: 10px;
   -webkit-box-shadow: 0px 5px 40px -10px rgba(0, 0, 0, 0.3);
+          box-shadow: 0px 5px 40px -10px rgba(0, 0, 0, 0.3);
 }
 
 .latestProducts .latest-product .product-container .category {
