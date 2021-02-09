@@ -21,7 +21,7 @@ $-turquoise: #27EAB8;
     margin: auto;
 }
 
-@mixin define-button {
+@mixin define-button{
     text-align: center;
     padding: 7px 15px;
     margin: auto;
@@ -37,7 +37,7 @@ $-turquoise: #27EAB8;
         @extend %linkactive;
     }
     &:hover{
-        background-color: $--oxfordblue;
+        background-color: $-pink;
         @extend %linkhover;
     }    
 }
@@ -58,7 +58,7 @@ html {
 }
 h1, h2, h3, h4{
     font-family: Monserrat, Arial, Helvetica, sans-serif;
-    // text-align: center;
+
 }
 h1{
     color: #1BA4FC;
@@ -79,11 +79,12 @@ nav{
     position: fixed; /* Set the navbar to fixed position */
     top: 0; /* Position the navbar at the top of the page */
     width: 100%;
+    z-index: 100;
 
     .logoNav{
         width: 50px;
         img{
-            width: 110px;
+            width: 130px;
         }
 
     }
@@ -98,11 +99,8 @@ nav{
                 font-size: 1.2rem;
                 text-decoration: none;
                 color: $-notBlack;
-                // text-transform: uppercase;
                 padding: 5px 15px;
-                // &:hover{
-                //     @extend %linkhover;
-                // }
+
             }
         }
     }
@@ -111,16 +109,21 @@ nav{
     .nav-icons{
         list-style: none;
         padding: 0;
+        width: 10%;
+        display: flex;
+        justify-content: space-around;
+
         li{
             display: inline-block;
             background-color: $-blue;
             border-radius: 50%;
-            width: 47px;
-            height: 47px;
+            width: 45px;
+            height: 45px;
             text-align: center;
+            line-height: 2.8rem;
 
             a{
-                font-size: 1.8rem;
+                font-size: 1.3rem;
                 color: $-white;
                 
             }
@@ -146,6 +149,7 @@ nav{
     align-items: center;
     background-image: linear-gradient(rgba(255,255,255,.5), rgba(255,255,255,.9)), url('/files/hero-picture.jpeg');
     background-position: center;
+    background-size:cover;
 
     .hero-content{
         display: flex;
@@ -284,7 +288,7 @@ nav{
         border-bottom: $-purple solid 5px;
         justify-content: space-between;
         align-items: center;
-
+        
         a{
             text-decoration: none;
             color: $-blue;

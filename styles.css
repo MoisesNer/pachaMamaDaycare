@@ -37,6 +37,7 @@ nav {
   top: 0;
   /* Position the navbar at the top of the page */
   width: 100%;
+  z-index: 100;
 }
 
 nav .logoNav {
@@ -44,7 +45,7 @@ nav .logoNav {
 }
 
 nav .logoNav img {
-  width: 110px;
+  width: 130px;
 }
 
 nav .nav-ul {
@@ -66,19 +67,26 @@ nav .nav-ul li a {
 nav .nav-icons {
   list-style: none;
   padding: 0;
+  width: 10%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
 }
 
 nav .nav-icons li {
   display: inline-block;
   background-color: #1BA4FC;
   border-radius: 50%;
-  width: 47px;
-  height: 47px;
+  width: 45px;
+  height: 45px;
   text-align: center;
+  line-height: 2.8rem;
 }
 
 nav .nav-icons li a {
-  font-size: 1.8rem;
+  font-size: 1.3rem;
   color: #ffffff;
 }
 
@@ -106,6 +114,7 @@ nav .nav-icons li:nth-child(3) {
   background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0.5)), to(rgba(255, 255, 255, 0.9))), url("/files/hero-picture.jpeg");
   background-image: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.9)), url("/files/hero-picture.jpeg");
   background-position: center;
+  background-size: cover;
 }
 
 .hero .hero-content {
