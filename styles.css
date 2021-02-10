@@ -807,4 +807,74 @@ footer .ourBrands .carousell .mySlides img {
   font-size: 16px;
   line-height: 24px;
 }
+
+.product-sample .product-info .spec {
+  margin-top: 44px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.product-sample .product-info .spec .color {
+  font-size: 20px;
+  font-weight: 550;
+}
+
+.product-sample .product-info .spec .color span {
+  height: 25px;
+  width: 25px;
+  border-radius: 50%;
+  display: inline-block;
+  margin-top: 8px;
+}
+
+.product-sample .product-info .spec .color .circle1 {
+  background-color: #EF0000;
+}
+
+.product-sample .product-info .spec .color .circle2 {
+  background-color: #18D870;
+}
+
+.product-sample .product-info .spec .color .circle3 {
+  background-color: #D818A4;
+}
+
+.product-sample .product-info .spec .color .circle4 {
+  background-color: #3D18D8;
+}
+
+.product-sample .product-info .spec .quantity {
+  margin-left: 136px;
+}
+
+.product-sample .product-info .spec .quantity p {
+  font-size: 20px;
+  font-weight: 550;
+}
+
+.product-sample .product-info .spec .quantity form {
+  margin-top: 10px;
+  width: 250px;
+  position: relative;
+}
+
+.product-sample .product-info .spec .quantity form .qty-select {
+  display: none;
+}
+
+.product-sample .product-info .spec .quantity form .qty-selected {
+  background-color: DodgerBlue;
+}
+
+.product-sample .product-info .spec .quantity form .qty-selected:after {
+  position: absolute;
+  content: "";
+  top: 14px;
+  right: 10px;
+  width: 0;
+  height: 0;
+  border: 6px solid transparent;
+  border-color: #fff transparent transparent transparent;
+}
 /*# sourceMappingURL=styles.css.map */
