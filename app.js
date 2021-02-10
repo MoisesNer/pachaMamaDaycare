@@ -80,8 +80,8 @@ qty.addEventListener('keypress', function(e){
   if(e.key === 'Enter'){
     alert(`You have added ${this.value} item(s) to your shopping cart`);
   }
-  e.preventDefault().
-})
+  e.preventDefault()
+});
 
 addCart.addEventListener('click', function(){
   alert(`You have added ${qty.value} item(s) to your shopping cart`);
