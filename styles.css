@@ -118,7 +118,7 @@ nav .nav-icons li:nth-child(3) {
 
 .submenu {
   position: fixed;
-  margin-top: 320px;
+  margin-top: 300px;
   left: 0;
   right: 0;
   display: -webkit-box;
@@ -254,7 +254,7 @@ nav .nav-icons li:nth-child(3) {
 
 .overlay {
   position: fixed;
-  top: 80px;
+  top: 68px;
   left: 0;
   right: 0;
   display: -webkit-box;
@@ -620,11 +620,15 @@ footer .ourBrands .carousell {
 
 footer .ourBrands .carousell .mySlides {
   height: 20vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 20px;
 }
 
 footer .ourBrands .carousell .mySlides img {
-  width: 300px;
-  margin: 0 200px;
+  width: 200px;
+  margin: 0 30px;
 }
 
 /* The dots/bullets/indicators */
@@ -632,7 +636,7 @@ footer .ourBrands .carousell .mySlides img {
   cursor: pointer;
   height: 25px;
   width: 25px;
-  margin: 0 10px;
+  margin: 20px 15px 10px 15px;
   background-color: #1BA4FC;
   border-radius: 50%;
   display: inline-block;
@@ -640,7 +644,7 @@ footer .ourBrands .carousell .mySlides img {
   transition: background-color 0.6s ease;
 }
 
-.active, .dot:hover {
+.dot:active, .dot:hover {
   background-color: #27EAB8;
 }
 
@@ -672,7 +676,7 @@ footer .ourBrands .carousell .mySlides img {
 
 .bottom {
   background-color: #9E2B87;
-  margin-top: 100px;
+  margin-top: 50px;
 }
 
 .bottom .bottom-content {

@@ -18,45 +18,73 @@
 <body>
     <!-- NAVBAR -->
     <nav>
-        <div class="nav-section">
-            <div class="logoNav">
-                <img src="/files/MamaPachaLogoWeb.png" alt="" class="navImg">
-            </div>
+      <div class="nav-section">
+      <div class="logoNav">
+          <a href="index.html"><img src="/files/MamaPachaLogoWeb.png" alt="" class="navImg"></a>
+      </div>
 
-            <div class="burgerMenu">
-                <div class="line"></div>
-                <div class="line"></div>
-                <div class="line"></div>
-            </div>
+      <div class="burguerMenu">
+          <div class="line"></div>
+          <div class="line"></div>
+          <div class="line"></div>
+      </div>
 
 
-            <ul class="nav-ul">
-                <li>
-                    <a href="products">Products</a>
-                </li>
-                <li>
-                    <a href="About">About</a>
-                </li>
-                <li>
-                    <a href="Contact">Contact</a>
-                </li>
-            </ul>
-         </div>
+      <ul class="nav-ul">
+          <li>
+              <a href="#" id="open-popup" class="open-popup">Products</a>
+          </li>
+          <li>
+              <a href="#">About</a>
+          </li>
+          <li>
+              <a href="#">Contact</a>
+          </li>
+      </ul>
+  </div>
 
-        <ul class="nav-icons">
-            <li>
-                <a href=""><i class="fas fa-search"></i></a>
-                
-            </li>
-            <li>
-                <a href=""><i class="fas fa-user"></i></a>               
-            </li>
-            <li>
-                <a href=""><i class="fas fa-shopping-cart"></i></a>
-            </li>
-        </ul>
-       
-    </nav>
+      <ul class="nav-icons">
+          <li>
+              <a href="" class="search"><i class="fas fa-search"></i></a>
+              
+          </li>
+          <li>
+              <a href="" class="account"><i class="fas fa-user"></i></a>               
+          </li>
+          <li>
+              <a href="#" class="cart btn-open-popup" id="btn-open-popup"><i class="fas fa-shopping-cart"></i></a>
+          </li>
+      </ul>
+      <div class="submenu" id="submenu">
+          <div class="pops" id="pops">
+             <!-- <a href="#" id="close-popup" class="close-popup"><i class="fas fa-times"></i></a>-->
+              <ul id="close-popup" class="close-popup">
+                  <li>Decor</li>
+                  <li>Furniture</li>
+              </ul>
+                  <ul >
+                      <li id="toys" class="toys">Toys</li>
+                      <li id="sub" class="sub">Building & Construction</li>
+                      <li id="sub" class="sub">Craft & Art</li>
+                      <li id="sub" class="sub">Learning & Education</li>
+                      <li id="sub" class="sub">Music</li>
+                      <li id="sub" class="sub">Science</li>
+                  </ul>
+              <ul>
+                  <li>Teacher Resources</li>
+              </ul>
+              
+          </div>
+      </div>
+              <!-- <button id="btn-abrir-popup" class="btn-abrir-popup">Abrir Ventana Emergente</button>-->
+              <div class="overlay" id="overlay">
+                  <div class="popup" id="popup">
+                      <a href="#" id="btn-close-popup" class="btn-close-popup"><i class="fas fa-times"></i></a>
+                      <p class="my-cart">My Cart</p>
+                      
+                  </div>
+              </div>
+          </nav>
 
     <!-- HERO SECTION -->
     <section class="hero">
@@ -78,10 +106,13 @@
         <div class="featured-product">
 
                 <div class="product-container">
+                  
                     <div class="category">
                         <a href="#">Category</a>
                     </div>
-                    <img src="/files/toddlerToy.jpg" alt="Product 1 picture">        
+                    <a href="product.html">
+                      <img src="/files/toddlerToy.jpg" alt="Product 1 picture">   
+                    </a>     
                     <div class="product-info">
                         <div>
                             <h4>Product Name 1</h4>
@@ -92,6 +123,7 @@
                             </p>
                         </div>
                     </div>
+                  
                 </div>
                 <div class="product-container">
                     <div class="category">
@@ -233,7 +265,7 @@
                     <span class="dot" onclick="currentSlide(3)"></span>
                 </div>
 
-            </section>
+           <!-- </section>
             <section class="u-clearfix u-section-3" id="sec-3a11">
               <div class="u-clearfix u-sheet u-sheet-1">
                 <div class="u-clearfix u-expanded-width u-layout-wrap u-layout-wrap-1">
@@ -243,16 +275,16 @@
                         <div class="u-container-layout u-container-layout-1"></div>
                       </div>
                       <div class="u-align-center u-container-style u-layout-cell u-size-30 u-layout-cell-2">
-                        <div class="u-container-layout u-valign-middle u-container-layout-2">
+                        <div class="u-container-layout u-valign-middle u-container-layout-2">-->
                           <!-- <h2 class="u-text u-text-default u-text-1">Sample Headline</h2>
                           <p class="u-text u-text-default u-text-2">Sample text. Click to select the text box. Click again or double click to start editing the text.</p> -->
-                        </div>
+                        <!--</div>
                       </div>
                     </div>
                   </div>
                 </div>
               </div>
-            </section>
+            </section>-->
 
 
 
