@@ -594,6 +594,8 @@ nav .nav-icons li:nth-child(3) {
 footer {
   margin-top: 120px;
   background-color: #FCDE60;
+  /* The dots/bullets/indicators */
+  /* Fading animation */
 }
 
 footer .ourBrands {
@@ -620,14 +622,80 @@ footer .ourBrands .carousell-ourBrands {
   height: 30vh;
   width: 100%;
   border: red solid 2px;
+  position: relative;
+  margin: auto;
 }
 
-footer .bottom {
+footer .ourBrands .carousell-ourBrands .slideshow-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  /* Hide the images by default */
+}
+
+footer .ourBrands .carousell-ourBrands .slideshow-container .mySlides {
+  display: none;
+  width: 50%;
+}
+
+footer .ourBrands .carousell-ourBrands .slideshow-container .mySlides img {
+  width: 20%;
+  margin-right: 40px;
+}
+
+footer .dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  -webkit-transition: background-color 0.6s ease;
+  transition: background-color 0.6s ease;
+}
+
+footer .active, footer .dot:hover {
+  background-color: #717171;
+}
+
+footer .fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {
+    opacity: .4;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fade {
+  from {
+    opacity: .4;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.bottom {
   background-color: #9E2B87;
   margin-top: 100px;
 }
 
-footer .bottom .bottom-content {
+.bottom .bottom-content {
   width: 80%;
   margin: auto;
   padding: 50px 0;
@@ -636,7 +704,7 @@ footer .bottom .bottom-content {
   display: flex;
 }
 
-footer .bottom .bottom-content .column-bottom {
+.bottom .bottom-content .column-bottom {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -647,19 +715,19 @@ footer .bottom .bottom-content .column-bottom {
   width: 25%;
 }
 
-footer .bottom .bottom-content .column-bottom img {
+.bottom .bottom-content .column-bottom img {
   height: 50px;
   width: 120px;
 }
 
-footer .bottom .bottom-content .column-bottom a {
+.bottom .bottom-content .column-bottom a {
   font-size: 1.2rem;
   text-decoration: none;
   color: #ffffff;
   padding: 10px 15px;
 }
 
-footer .bottom .bottom-content .column-bottom p {
+.bottom .bottom-content .column-bottom p {
   color: #ffffff;
   line-height: 2.5;
 }
