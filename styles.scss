@@ -1,3 +1,4 @@
+//@import 'scss/product';
 //PALETTE
 
 $-white: #ffffff;
@@ -261,7 +262,7 @@ nav {
 .overlay {
 	//ackground: rgba(0,0,0,.3);
 	position: fixed;
-	margin-top: 80px;
+	top: 80px;
 	//bottom: 0;
 	left: 0;
 	right: 0;
@@ -661,5 +662,90 @@ footer{
                     line-height: 2.5;
                 }
             }
+        }
+    }
+
+    /*PRODUCT*/
+    .product-sample{
+        margin-top:100px;
+         .category{
+            background-color:$-blue;
+            padding:10px 5%;
+            color:$-white;
+            a{
+                text-decoration:none;
+                color:$-white;
+               
+            }
+            a:hover{
+                text-decoration:underline;
+            }
+           
+        }
+        .product-gallery{
+            display:flex;
+            justify-content:space-around;
+            margin-bottom:40px;
+            margin-top:30px;
+            .gallery-img{
+                width:400px;
+               
+                margin-top:15px;
+                img{
+                    box-shadow: 0px 5px 14px -10px #09191b;
+                    padding:10px 100px;
+                    width:90%;
+                }
+                ;
+            }
+        }
+        .product-info{
+            width:45%;
+            padding:5px 20px;
+            h1{
+                color:$-notBlack;
+                font-size:30px;
+                padding-top:10px;
+                font-weight:550;
+                margin-bottom:44px;
+            }
+            h2{
+                color:$-notBlack;
+                font-size:20px;
+                font-weight:400;
+                margin-bottom:16px;
+            }
+            h3{
+                color:$-notBlack;
+                font-size:25px;
+                font-weight:550;
+                margin-bottom:15.55px;
+            }
+            
+            hr{
+                height:2px;
+                color:$-turquoise;
+                border:0;
+                background-color: $-turquoise;
+            }
+            .product-description{
+                font-size:20px;
+                font-weight:550;
+                margin-top:34.5px; 
+                margin-bottom:10px;   
+             } 
+            ul{
+                list-style-type: none;
+                li{
+                    font-size:16px;
+                    line-height: 24px;
+
+                }
+                }
+                  
+           
+                    
+                
+            
         }
     }
