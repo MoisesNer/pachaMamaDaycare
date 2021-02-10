@@ -49,7 +49,7 @@ $-turquoise: #27EAB8;
 } 
 %linkhover{
     text-shadow: 0px 0px 6px rgba(255, 255, 255, 1);
-  box-shadow  : 0px 5px 40px -10px rgba(0,0,0,0.57);
+    box-shadow  : 0px 5px 40px -10px rgba(0,0,0,0.57);
     -moz-box-shadow: 0px 5px 40px -10px rgba(0,0,0,0.57);
     transition: all 0.4s ease 0s;
 }
@@ -62,7 +62,7 @@ h1, h2, h3, h4{
 
 }
 h1{
-    color: #1BA4FC;
+    color: $-blue;
 }
 h2{
     color: $-notBlack;
@@ -87,46 +87,38 @@ nav {
     top: 0;
     /* Position the navbar at the top of the page */
     width: 100%;
+    z-index: 100;
+
   }
-  .nav-section{
-    width:30%;
-    display:flex;
-    justify-content:space-between;
-  }
-  nav .logoNav {
-    width: 10%;
-    display: inline;
-  }
-  
-  nav .logoNav img {
-    width: 130px;
-  }
-  nav .burguerMenu{
-    visibility: hidden;
-    display:none;
-  }
-  nav .nav-ul {
-    list-style: none;
-    padding: 0;
-    width:50%;
-    margin:0 !important;
-    display:flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-  }
-  
-  nav .nav-ul li {
-    display: inline-block;
-    
-  }
-  
-  nav .nav-ul li a {
-    font-size: 1.2rem;
-    text-decoration: none;
-    color: #313131;
-    padding: 5px 15px;
-  }
+      .nav-section{
+      width:30%;
+      display:flex;
+      justify-content:space-between;
+      
+      ul{
+          li{
+              list-style: none;
+              text-decoration: none;
+              display: inline-block;
+
+              a{
+                line-height: 2;
+                font-size: 1.3rem;
+                text-decoration: none;
+                color:$-notBlack;
+                padding: 5px 15px;
+              }
+          }
+      }
+    }
+    nav .logoNav {
+      width: 10%;
+      display: inline;
+
+      img{
+          height: 45px;
+        }
+    }
   
   nav .nav-icons {
     list-style: none;
@@ -135,7 +127,7 @@ nav {
   
   nav .nav-icons li {
     display: inline-block;
-    background-color: #1BA4FC;
+    background-color: $-blue;
     border-radius: 50%;
     width: 45px;
     height: 45px;
@@ -145,7 +137,7 @@ nav {
   
   nav .nav-icons li a {
     font-size: 1.8rem;
-    color: #ffffff;
+    color: $-white;
   }
   .fas{
     font-size:20px;
@@ -296,7 +288,7 @@ nav {
         display: block;
         text-align: right;
         transition: .3s ease all;
-        color: #BBBBBB;
+        color: $-gray;
         :hover {
             color: #000;
         }
@@ -322,7 +314,7 @@ nav {
 
 .hero{
     margin: auto;
-    height: 75vh;
+    height: 60vh;
     width: 100%;
     display: flex;
     justify-content: center;
@@ -336,6 +328,9 @@ nav {
         flex-direction: column;
         justify-content: center;
 
+        img{
+            margin-top: 50px;
+        }
         h1{
             margin: 30px;
             text-align: center;
@@ -529,7 +524,7 @@ nav {
                         
 
                         background-color: $-yellow;
-                        padding: 6px;
+                        padding: 4px;
                         border-radius: 20px;
                         
                         
@@ -537,7 +532,7 @@ nav {
                         i{
                             background-color: $-yellowDarker;
                             color: $-white;
-                            padding: 7px;
+                            padding: 6px;
                             border-radius: 20px;
                         }
                     }
@@ -554,6 +549,7 @@ nav {
 footer{
     margin-top: 120px;
     background-color: $-yellow;
+    // border: red solid 3px;
     
     .ourBrands{
 
@@ -566,48 +562,57 @@ footer{
             padding: 50px 0;
         }
 
-        .carousell-ourBrands{
-            height: 30vh;
-            width: 100%;
-            border: red solid 2px;
+        .carousell{
+            // height: 30vh;
+            // width: 100%;
             //max-width: 1000px;
-            position: relative;
+            // margin: auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            width: 80%;
             margin: auto;
-            .slideshow-container{
-                display:flex;
-                justify-content:space-around;
-                flex-direction: column;
-            /* Hide the images by default */
-            .mySlides {
-                display: none;
-               width:50%;
-               img{
-                width:20%;
-                margin-right:40px;
+            
+            
+            
+            // .slideshow-container{
+                // display:flex;
+                // justify-content:space-around;
+                // flex-direction: column;
+                /* Hide the images by default */
+                
+                .mySlides {
+                    height: 20vh;
+
+                    img{
+                        width: 300px;
+                        margin: 0 200px;
+                   }
+               
                 }
-            }
             
                 
-              }
+        }
             
-            }
+    }
 }
 
 
 /* The dots/bullets/indicators */
 .dot {
   cursor: pointer;
-  height: 15px;
-  width: 15px;
-  margin: 0 2px;
-  background-color: #bbb;
+  height: 25px;
+  width: 25px;
+  margin: 0 10px;
+  background-color: $-blue;
   border-radius: 50%;
   display: inline-block;
   transition: background-color 0.6s ease;
 }
 
 .active, .dot:hover {
-  background-color: #717171;
+  background-color: $-turquoise;
 }
 
 /* Fading animation */
@@ -627,14 +632,13 @@ footer{
   from {opacity: .4}
   to {opacity: 1}
 }
-        }
+        
     
 
     .bottom{
         background-color: $-purple;
         margin-top: 100px;
         
-        // justify-content: space-between;
         .bottom-content{
             @include width-margin();
             padding: 50px 0;
