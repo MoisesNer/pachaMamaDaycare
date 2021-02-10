@@ -71,3 +71,19 @@ slides[slideIndex-1].style.display = "block";
 
   dots[slideIndex-1].className += " active";
 }
+
+//ALERT SHOPPING CART
+const addCart = document.getElementById('AddCart');
+const qty = document.getElementById('qty');
+
+qty.addEventListener('keypress', function(e){
+  if(e.key === 'Enter'){
+    alert(`You have added ${this.value} item(s) to your shopping cart`);
+  }
+  e.preventDefault().
+})
+
+addCart.addEventListener('click', function(){
+  alert(`You have added ${qty.value} item(s) to your shopping cart`);
+
+});

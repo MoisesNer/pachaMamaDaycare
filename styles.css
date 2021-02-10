@@ -318,11 +318,14 @@ nav .nav-icons li:nth-child(3) {
             background-color: #FCDE60;
             padding: 5px;
             border-radius: 20px; }
-            .featuredProducts .featured-product .product-container .product-info .price-qty form p i {
+            .featuredProducts .featured-product .product-container .product-info .price-qty form p a {
               background-color: #F4CC2E;
               color: #ffffff;
               padding: 6px;
-              border-radius: 20px; }
+              border-radius: 20px;
+              cursor: pointer; }
+              .featuredProducts .featured-product .product-container .product-info .price-qty form p a:hover {
+                color: #707070; }
 
 .latestProducts {
   width: 80%;
@@ -397,11 +400,14 @@ nav .nav-icons li:nth-child(3) {
             background-color: #FCDE60;
             padding: 5px;
             border-radius: 20px; }
-            .latestProducts .latest-product .product-container .product-info .price-qty form p i {
+            .latestProducts .latest-product .product-container .product-info .price-qty form p a {
               background-color: #F4CC2E;
               color: #ffffff;
               padding: 6px;
-              border-radius: 20px; }
+              border-radius: 20px;
+              cursor: pointer; }
+              .latestProducts .latest-product .product-container .product-info .price-qty form p a:hover {
+                color: #707070; }
 
 footer {
   margin-top: 120px;
