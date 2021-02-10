@@ -382,16 +382,15 @@ nav {
         .product-container{
             margin: 0 40px;
             position: relative;
-            width: 343px;
-            height: 300px;
             border-radius: 10px;
             box-shadow: 0px 5px 40px -10px rgba(0,0,0,0.3);
+            
             
             .category{
                 position: absolute;
                 right: 10px;
                 top: 10px;
-
+                
                 a{
                     text-align: center;
                     padding: 5px 10px;
@@ -402,53 +401,69 @@ nav {
                     text-decoration: none;
                     display: inline-block;
                     border-radius: 5px;
-
-
+                    
+                    
                 }
             }
             img{
-                width: 313px;
-                height: 240px;
+                width: 240px;
+                height: 220px;
+                margin: 50px 70px 30px 70px;
+                
             }
             
             .product-info{
                 border-top: solid $-notBlack 2px;
                 margin: auto;
-                padding-top: 5px;
-                width: 313px;
-                
+                padding-top: 15px;
+                width: 320px;
+                margin-bottom: 17px;
+                h5{
+                    font-size: 1.3rem;
+                    font-weight: 500;
+                    margin-bottom: 10px;
+                }
                 .price-qty{
-                    // display: flex;
-                    // flex-direction: row;
-                    // justify-content: space-between;
-                    
-
-                    p{
-                        text-align: right;
+                    form{
+                        // border: red solid 3px;
                         position: absolute;
-                        right: 8px;
-                        bottom: 8px;
-                        width: 100px;
-                        font-weight: bold;
-                        // border: red solid 2px;
-
-                        background-color: $-yellow;
-                        padding: 6px;
-                        border-radius: 20px;
+                        right: 25px;
+                        bottom: 23px;
+                        input{
+                            position: absolute;
+                            right: 46px;
+                            bottom: 9px;
                         
-                        
-                                                
-                        i{
-                            background-color: $-yellowDarker;
-                            color: $-white;
-                            padding: 7px;
+                            width: 40px;
                             border-radius: 20px;
+                            border: none;
+                            // z-index: 1;
+
+                            color: $-notBlack;
+                            background-color: $-yellow;
+                            font-weight:bold;
+                            font-size: 1.3rem;
+                        }
+                        
+                        p{
+                            text-align: right;
+                            width: 100px;
+                            font-weight:bold;
+                            background-color: $-yellow;
+                            padding: 5px;
+                            border-radius: 20px;
+                                               
+                            i{
+                                background-color: $-yellowDarker;
+                                color: $-white;
+                                padding: 6px;
+                                border-radius: 20px;
+                            }
                         }
                     }
                 }
             }
             
-
         }
     }
 }
@@ -478,16 +493,15 @@ nav {
         .product-container{
             margin: 0 40px;
             position: relative;
-            width: 343px;
-            height: 300px;
             border-radius: 10px;
             box-shadow: 0px 5px 40px -10px rgba(0,0,0,0.3);
+            
             
             .category{
                 position: absolute;
                 right: 10px;
                 top: 10px;
-
+                
                 a{
                     text-align: center;
                     padding: 5px 10px;
@@ -498,53 +512,72 @@ nav {
                     text-decoration: none;
                     display: inline-block;
                     border-radius: 5px;
-
-
+                    
+                    
                 }
             }
             img{
-                width: 313px;
-                height: 240px;
+                width: 240px;
+                height: 220px;
+                margin: 50px 70px 30px 70px;
+                
             }
             
             .product-info{
                 border-top: solid $-notBlack 2px;
                 margin: auto;
-                padding-top: 5px;
-                width: 313px;
-                
+                padding-top: 15px;
+                width: 320px;
+                margin-bottom: 17px;
+                h5{
+                    font-size: 1.3rem;
+                    font-weight: 500;
+                    margin-bottom: 10px;
+                }
                 .price-qty{
-                    p{
-                        text-align: right;
+                    form{
+                        // border: red solid 3px;
                         position: absolute;
-                        right: 8px;
-                        bottom: 8px;
-                        width: 100px;
-                        font-weight: bold;
+                        right: 25px;
+                        bottom: 23px;
+                        input{
+                            position: absolute;
+                            right: 46px;
+                            bottom: 9px;
                         
-
-                        background-color: $-yellow;
-                        padding: 4px;
-                        border-radius: 20px;
-                        
-                        
-                                                
-                        i{
-                            background-color: $-yellowDarker;
-                            color: $-white;
-                            padding: 6px;
+                            width: 40px;
                             border-radius: 20px;
+                            border: none;
+                            // z-index: 1;
+
+                            color: $-notBlack;
+                            background-color: $-yellow;
+                            font-weight:bold;
+                            font-size: 1.3rem;
+                        }
+                        
+                        p{
+                            text-align: right;
+                            width: 100px;
+                            font-weight:bold;
+                            background-color: $-yellow;
+                            padding: 5px;
+                            border-radius: 20px;
+                                               
+                            i{
+                                background-color: $-yellowDarker;
+                                color: $-white;
+                                padding: 6px;
+                                border-radius: 20px;
+                            }
                         }
                     }
                 }
             }
             
-
         }
     }
-
 }
-
 // FOOTER
 footer{
     margin-top: 120px;
