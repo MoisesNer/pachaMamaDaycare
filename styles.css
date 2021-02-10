@@ -38,6 +38,7 @@ nav {
   top: 0;
   /* Position the navbar at the top of the page */
   width: 100%;
+  z-index: 100;
 }
 
 .nav-section {
@@ -399,12 +400,6 @@ footer .ourBrands {
 
 footer .ourBrands h2 {
   padding: 50px 0;
-}
-
-footer .ourBrands .carousell-ourBrands {
-  height: 30vh;
-  width: 100%;
-  border: red solid 2px;
 }
 
 footer .bottom {
