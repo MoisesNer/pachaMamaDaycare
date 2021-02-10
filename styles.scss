@@ -137,7 +137,7 @@ nav {
 
     nav .nav-icons li {
             display: inline-block;
-        background-color: #1BA4FC;
+        background-color: $-blue;
         border-radius: 50%;
         width: 45px;
         height: 45px;
@@ -147,7 +147,7 @@ nav {
 
     nav .nav-icons li a {
         font-size: 1.8rem;
-        color: #ffffff;
+        color: $-white;
     }
     .fas{
         font-size:20px;
@@ -156,12 +156,12 @@ nav {
         }    
 
         nav .nav-icons li:nth-child(2) {
-            background-color: #DF1988;
+            background-color: $-pink;
             margin-right:18px;
         }
 
         nav .nav-icons li:nth-child(3) {
-            background-color: #F4CC2E;
+            background-color: $-yellowDarker;
         }
 
 // HERO SECTION
