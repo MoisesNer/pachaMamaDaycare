@@ -61,7 +61,7 @@ h1, h2, h3, h4{
 
 }
 h1{
-    color: #1BA4FC;
+    color: $-blue;
 }
 h2{
     color: $-notBlack;
@@ -87,88 +87,233 @@ nav {
     /* Position the navbar at the top of the page */
     width: 100%;
     z-index: 100;
+
   }
       .nav-section{
       width:30%;
       display:flex;
       justify-content:space-between;
+      
+      ul{
+          li{
+              list-style: none;
+              text-decoration: none;
+              display: inline-block;
+
+              a{
+                line-height: 2;
+                font-size: 1.3rem;
+                text-decoration: none;
+                color:$-notBlack;
+                padding: 5px 15px;
+              }
+          }
+      }
     }
     nav .logoNav {
       width: 10%;
       display: inline;
+
+      img{
+          height: 45px;
+        }
     }
-    
-    nav .logoNav img {
-      width: 130px;
+  
+  nav .nav-icons {
+    list-style: none;
+    padding: 0;
+  }
+  
+  nav .nav-icons li {
+    display: inline-block;
+    background-color: $-blue;
+    border-radius: 50%;
+    width: 45px;
+    height: 45px;
+    text-align: center;
+    margin-right:18px;
+  }
+  
+  nav .nav-icons li a {
+    font-size: 1.8rem;
+    color: $-white;
+  }
+  .fas{
+    font-size:20px;
+    text-align:center;
+    padding-top:7px;
+  }
+  
+  nav .nav-icons li:nth-child(2) {
+    background-color: #DF1988;
+    margin-right:18px;
+  }
+  
+  nav .nav-icons li:nth-child(3) {
+    background-color: #F4CC2E;
+  }
+  .btn-open-popup {
+	cursor: pointer;
+	transition: .3s ease all;
+	cursor: pointer;
+}
+
+
+.submenu {
+	//background: rgba(0,0,0,.3);
+	position: fixed;
+	margin-top: 320px;
+	//bottom: 0;
+	left: 0;
+	right: 0;
+    display: flex;
+    flex-direction:row;
+    align-items: flex-start;
+	justify-content: flex-start;
+    visibility: hidden;
+    width: 100%;
+}
+
+.submenu.active {
+	visibility: visible;
+}
+
+.pops {
+	background: white;
+	box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.3);
+    display:flex;
+    flex-direction:row;
+    justify-content: space-around;
+    font-family: 'Montserrat', sans-serif;
+	padding: 20px;
+	text-align: center;
+    width: 100%;
+    align-self:flex-start;
+	transition: .3s ease all;
+	transform: scale(0.7);
+    opacity: 0;
+    ul {
+        list-style:none;
+        font-size: 16px;
+        line-height: 16px;
+        display: block;
+        text-align: right;
+        transition: .3s ease all;
+        color: black;
+        padding-top:15px;
+        :hover {
+            color: gray;
+        }
+        li{display:flex;
+            flex-direction:column;
+            justify-content: flex-start;
+            text-align:left;
+            list-style:none;
+        font-size:20px;
+        margin-bottom:15px;
+       
+        }
+        li:hover{
+            color:gray;
+        }
+       
+        .toys{
+            display:flex;
+            flex-direction:column;
+            
+        }
+        .sub{
+            list-style:none;
+            font-size:18px;
+            font-weight:300;
+        }
+        li:first-child{
+            color:black;
+        }
     }
-    nav .burguerMenu{
-        visibility: hidden;
-        display:none;
-      }
-      nav .nav-ul {
-        list-style: none;
-        padding: 0;
-        width:50%;
-        margin:0 !important;
+    .close-popup{
         display:flex;
         flex-direction: row;
-        justify-content: center;
-        align-items: center;
-      }
+        justify-content:space-between;
+        width:30%;
 
-      nav .nav-ul li {
-        display: inline-block;
-        
-      }
-   
+    }
+
     
-    nav .nav-ul li a {
-        font-size: 1.2rem;
-        text-decoration: none;
-        color: #313131;
-        padding: 5px 15px;
+}
+.pops.active {	transform: scale(1); opacity: 1; }
+//SHOPPING CART
+.btn-open-popup {
+	cursor: pointer;
+	transition: .3s ease all;
+	cursor: pointer;
+}
 
-    }
 
-    nav .nav-icons {
-        list-style: none;
-        padding: 0;
-    }
+.overlay {
+	//ackground: rgba(0,0,0,.3);
+	position: fixed;
+	margin-top: 80px;
+	//bottom: 0;
+	left: 0;
+	right: 0;
+    display: flex;
+    flex-direction:row-reverse;
+    align-items: flex-start;
+	justify-content: flex-start;
+	visibility: hidden;
+}
 
-    nav .nav-icons li {
-            display: inline-block;
-        background-color: $-blue;
-        border-radius: 50%;
-        width: 45px;
-        height: 45px;
-        text-align: center;
-        margin-right:18px;
-    }
+.overlay.active {
+	visibility: visible;
+}
 
-    nav .nav-icons li a {
-        font-size: 1.8rem;
-        color: $-white;
-    }
-    .fas{
-        font-size:20px;
-        text-align:center;
-        padding-top:7px;
-        }    
-
-        nav .nav-icons li:nth-child(2) {
-            background-color: $-pink;
-            margin-right:18px;
+.popup {
+	background: white;
+	box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.3);
+	border-radius: 2px;
+    font-family: 'Montserrat', sans-serif;
+    margin-right:15%;
+	padding: 20px;
+	text-align: center;
+    width: 350px;
+    align-self:flex-start;
+	transition: .3s ease all;
+	transform: scale(0.7);
+    opacity: 0;
+    .btn-close-popup {
+        font-size: 16px;
+        line-height: 16px;
+        display: block;
+        text-align: right;
+        transition: .3s ease all;
+        color: $-gray;
+        :hover {
+            color: #000;
         }
+    }
+    .my-cart {
+	font-size: 25px;
+    font-weight: 600;
+    margin-top:15px;
+	margin-bottom: 10px;
+    color:black;
+    }
 
-        nav .nav-icons li:nth-child(3) {
-            background-color: $-yellowDarker;
-        }
+    
+}
+
+
+
+.popup.active {	transform: scale(1); opacity: 1; }
+ 
+
 
 // HERO SECTION
 
 .hero{
     margin: auto;
-    height: 75vh;
+    height: 60vh;
     width: 100%;
     display: flex;
     justify-content: center;
@@ -182,6 +327,9 @@ nav {
         flex-direction: column;
         justify-content: center;
 
+        img{
+            margin-top: 50px;
+        }
         h1{
             margin: 30px;
             text-align: center;
@@ -375,7 +523,7 @@ nav {
                         
 
                         background-color: $-yellow;
-                        padding: 6px;
+                        padding: 4px;
                         border-radius: 20px;
                         
                         
@@ -383,7 +531,7 @@ nav {
                         i{
                             background-color: $-yellowDarker;
                             color: $-white;
-                            padding: 7px;
+                            padding: 6px;
                             border-radius: 20px;
                         }
                     }
@@ -400,6 +548,7 @@ nav {
 footer{
     margin-top: 120px;
     background-color: $-yellow;
+    // border: red solid 3px;
     
     .ourBrands{
 
@@ -413,10 +562,77 @@ footer{
         }
 
         .carousell{
-           
+            // height: 30vh;
+            // width: 100%;
+            //max-width: 1000px;
+            // margin: auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            width: 80%;
+            margin: auto;
             
+            
+            
+            // .slideshow-container{
+                // display:flex;
+                // justify-content:space-around;
+                // flex-direction: column;
+                /* Hide the images by default */
+                
+                .mySlides {
+                    height: 20vh;
+
+                    img{
+                        width: 300px;
+                        margin: 0 200px;
+                   }
+               
+                }
+            
+                
         }
+            
     }
+}
+
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 25px;
+  width: 25px;
+  margin: 0 10px;
+  background-color: $-blue;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: $-turquoise;
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+        
+    
 
     .bottom{
         background-color: $-purple;
@@ -451,4 +667,3 @@ footer{
             }
         }
     }
-}
