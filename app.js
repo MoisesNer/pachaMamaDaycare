@@ -87,3 +87,12 @@ addCart.addEventListener('click', function(){
   alert(`You have added ${qty.value} item(s) to your shopping cart`);
 
 });
+
+
+
+let color = document.querySelector(".circle");
+
+color.addEventListener('click', function(){
+  document.color.style.border = '2px solid black';
+});
+color.addEventListener("click", black);
