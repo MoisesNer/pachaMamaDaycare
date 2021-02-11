@@ -311,7 +311,7 @@ h2{
             .btn-hero{
 
                 text-align: center;
-                padding: 7px 15px;
+                padding: 5px 50px;
                 margin: auto;
                 background-color: $-purple;
                 color: $-white; 
@@ -319,7 +319,7 @@ h2{
                 text-decoration: none;
                 display: inline-block;
                 animation: drop 1.5s ease;
-                border-radius: 10px;
+                border-radius: 6px;
                 width: 289px;
                 height: 42px;
                 line-height: 40px;
@@ -1058,30 +1058,30 @@ h2{
     nav {
         background-color: #ffffff;
         -webkit-box-shadow: 0px 5px 40px -10px rgba(0, 0, 0, 0.3);
-    box-shadow: 0px 5px 40px -10px rgba(0, 0, 0, 0.3);
+        box-shadow: 0px 5px 40px -10px rgba(0, 0, 0, 0.3);
         display: -webkit-box;
         display: -ms-flexbox;
         display: flex;
         -ms-flex-pack: distribute;
-            justify-content: space-around;
+        justify-content: space-around;
         -webkit-box-align: center;
-            -ms-flex-align: center;
-                align-items: center;
+        -ms-flex-align: center;
+        align-items: center;
         padding: 10px 0;
         position: fixed;
-        /* Set the navbar to fixed position */
         top: 0;
-        /* Position the navbar at the top of the page */
         width: 100%;
         z-index: 100;
 
     }
         .nav-section{
-        width:30%;
+        width:50%;
         display:flex;
-        justify-content:space-between;
+        justify-content:space-around;
+        
         
         ul{
+            //margin-left:30px;
             li{
                 list-style: none;
                 text-decoration: none;
@@ -1096,7 +1096,7 @@ h2{
                 }
             }
         }
-        }
+    }
         nav .logoNav {
         width: 10%;
         display: inline;
@@ -1299,9 +1299,9 @@ h2{
     // HERO SECTION
 
     .hero{
-        margin: auto;
+        margin-top:70px;
         height: 60vh;
-        width: 100%;
+        width: 150%;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -1313,9 +1313,13 @@ h2{
             display: flex;
             flex-direction: column;
             justify-content: center;
-
+            align-content: center;
+            background-size:cover;
+            width:100%;
             img{
-                margin-top: 50px;
+                align-self: center;
+                margin-top: 30px;
+                width:30%;
             }
             h1{
                 margin: 30px;
@@ -1324,7 +1328,7 @@ h2{
             .btn-hero{
 
                 text-align: center;
-                padding: 7px 15px;
+                padding: 5px 50px;
                 margin: auto;
                 background-color: $-purple;
                 color: $-white; 
@@ -1332,7 +1336,7 @@ h2{
                 text-decoration: none;
                 display: inline-block;
                 animation: drop 1.5s ease;
-                border-radius: 10px;
+                border-radius: 6px;
                 width: 289px;
                 height: 42px;
                 line-height: 40px;
@@ -1344,10 +1348,18 @@ h2{
 
     // FEATURED PRODUCTS
     .featuredProducts{
-        @include width-margin();
+        //@include width-margin();
+        width:135%;
+        display:flex;
+        flex-direction: column;
+        margin: 0 5%;
+        justify-content:center;
+        align-content:center;
         .section-title{
+            
             margin-top: 110px;
             display: flex;
+            width:100%;
             flex-wrap: wrap;
             border-bottom: $-turquoise solid 5px;
             justify-content: space-between;
@@ -1360,15 +1372,21 @@ h2{
             }
     
         }
+        
         .featured-product{
             display: flex;
-            justify-content: center;
+            flex-direction:row;
+            flex-wrap: wrap;
+            justify-content: space-between;
             margin-top: 100px;
-
+            
             .product-container{
-                margin: 0 40px;
+                margin: 15px 50px;
                 position: relative;
                 border-radius: 10px;
+                display:flex;
+                flex-direction:column;
+                justify-content: center;
                 box-shadow: 0px 5px 40px -10px rgba(0,0,0,0.3);
                 
                 
@@ -1466,8 +1484,14 @@ h2{
 
     // LATEST PRODUCTS
     .latestProducts{
-        @include width-margin();
-        margin-top: 150px;
+        //@include width-margin();
+        padding-top:80px;
+        width:135%;
+        display:flex;
+        flex-direction: column;
+        margin: 0 5%;
+        justify-content:center;
+        align-content:center;
         .section-title{
             display: flex;
             flex-wrap: wrap;
@@ -1483,13 +1507,19 @@ h2{
         }
         .latest-product{
             display: flex;
-            justify-content: center;
+            flex-direction:row;
+            flex-wrap: wrap;
+            justify-content: space-between;
             margin-top: 100px;
+            
 
             .product-container{
-                margin: 0 40px;
+                margin: 15px 50px;
                 position: relative;
                 border-radius: 10px;
+                display:flex;
+                flex-direction:column;
+                justify-content: center;
                 box-shadow: 0px 5px 40px -10px rgba(0,0,0,0.3);
                 
                 
@@ -1581,6 +1611,7 @@ h2{
     // FOOTER
     footer{
         margin-top: 120px;
+        width:150%;
         background-color: $-yellow;
         // border: red solid 3px;
         
@@ -1639,7 +1670,7 @@ h2{
     cursor: pointer;
     height: 25px;
     width: 25px;
-    margin: 20px 15px 10px 15px ;
+    margin: 30px 15px 10px 15px ;
     background-color: $-blue;
     border-radius: 50%;
     display: inline-block;
@@ -1705,9 +1736,17 @@ h2{
         }
 
         /*PRODUCT*/
+        
         .product-sample{
             margin-top:100px;
+            width:200%;
+            display:flex;
+            flex-direction:column;
+            justify-content: space-between;
+
+            
             .category{
+                width:100%;
                 background-color:$-blue;
                 padding:10px 5%;
                 color:$-white;
@@ -1726,8 +1765,9 @@ h2{
                 justify-content:space-around;
                 margin-bottom:40px;
                 margin-top:30px;
+                width:45%;
                 .gallery-img{
-                    width:400px;
+                    width:100%;
                 
                     margin-top:15px;
                     img{
@@ -1755,11 +1795,13 @@ h2{
             }
             .product-info{
                 width:45%;
-                padding:5px 20px;
+                margin-left:40px;
+                padding:5px 20px 5px 70px;
                 h1{
                     color:$-notBlack;
                     font-size:30px;
                     padding-top:10px;
+                    margin-left:20px;
                     font-weight:550;
                     margin-bottom:44px;
                 }

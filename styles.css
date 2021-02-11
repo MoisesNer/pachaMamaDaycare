@@ -332,7 +332,7 @@ h2 {
   }
   .hero .hero-content .btn-hero {
     text-align: center;
-    padding: 7px 15px;
+    padding: 5px 50px;
     margin: auto;
     background-color: #9E2B87;
     color: #ffffff;
@@ -341,7 +341,7 @@ h2 {
     display: inline-block;
     -webkit-animation: drop 1.5s ease;
             animation: drop 1.5s ease;
-    border-radius: 10px;
+    border-radius: 6px;
     width: 289px;
     height: 42px;
     line-height: 40px;
@@ -1079,20 +1079,17 @@ h2 {
     align-items: center;
     padding: 10px 0;
     position: fixed;
-    /* Set the navbar to fixed position */
     top: 0;
-    /* Position the navbar at the top of the page */
     width: 100%;
     z-index: 100;
   }
   .nav-section {
-    width: 30%;
+    width: 50%;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
   }
   .nav-section ul li {
     list-style: none;
@@ -1337,9 +1334,9 @@ h2 {
     opacity: 1;
   }
   .hero {
-    margin: auto;
+    margin-top: 70px;
     height: 60vh;
-    width: 100%;
+    width: 150%;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -1365,9 +1362,17 @@ h2 {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
+    -ms-flex-line-pack: center;
+        align-content: center;
+    background-size: cover;
+    width: 100%;
   }
   .hero .hero-content img {
-    margin-top: 50px;
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+    margin-top: 30px;
+    width: 30%;
   }
   .hero .hero-content h1 {
     margin: 30px;
@@ -1375,7 +1380,7 @@ h2 {
   }
   .hero .hero-content .btn-hero {
     text-align: center;
-    padding: 7px 15px;
+    padding: 5px 50px;
     margin: auto;
     background-color: #9E2B87;
     color: #ffffff;
@@ -1384,20 +1389,33 @@ h2 {
     display: inline-block;
     -webkit-animation: drop 1.5s ease;
             animation: drop 1.5s ease;
-    border-radius: 10px;
+    border-radius: 6px;
     width: 289px;
     height: 42px;
     line-height: 40px;
   }
   .featuredProducts {
-    width: 80%;
-    margin: auto;
+    width: 135%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    margin: 0 5%;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -ms-flex-line-pack: center;
+        align-content: center;
   }
   .featuredProducts .section-title {
     margin-top: 110px;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    width: 100%;
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
     border-bottom: #27EAB8 solid 5px;
@@ -1417,15 +1435,31 @@ h2 {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
     margin-top: 100px;
   }
   .featuredProducts .featured-product .product-container {
-    margin: 0 40px;
+    margin: 15px 50px;
     position: relative;
     border-radius: 10px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
     -webkit-box-shadow: 0px 5px 40px -10px rgba(0, 0, 0, 0.3);
             box-shadow: 0px 5px 40px -10px rgba(0, 0, 0, 0.3);
   }
@@ -1509,9 +1543,21 @@ h2 {
     color: #707070;
   }
   .latestProducts {
-    width: 80%;
-    margin: auto;
-    margin-top: 150px;
+    padding-top: 80px;
+    width: 135%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    margin: 0 5%;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -ms-flex-line-pack: center;
+        align-content: center;
   }
   .latestProducts .section-title {
     display: -webkit-box;
@@ -1536,15 +1582,31 @@ h2 {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
     margin-top: 100px;
   }
   .latestProducts .latest-product .product-container {
-    margin: 0 40px;
+    margin: 15px 50px;
     position: relative;
     border-radius: 10px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
     -webkit-box-shadow: 0px 5px 40px -10px rgba(0, 0, 0, 0.3);
             box-shadow: 0px 5px 40px -10px rgba(0, 0, 0, 0.3);
   }
@@ -1618,6 +1680,7 @@ h2 {
   }
   footer {
     margin-top: 120px;
+    width: 150%;
     background-color: #FCDE60;
   }
   footer .ourBrands {
@@ -1672,7 +1735,7 @@ h2 {
     cursor: pointer;
     height: 25px;
     width: 25px;
-    margin: 20px 15px 10px 15px;
+    margin: 30px 15px 10px 15px;
     background-color: #1BA4FC;
     border-radius: 50%;
     display: inline-block;
@@ -1742,10 +1805,22 @@ h2 {
     line-height: 2.5;
   }
   /*PRODUCT*/
+  body {
+    width: 100%;
+  }
   .product-sample {
     margin-top: 100px;
+    width: 160%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
   }
   .product-sample .category {
+    width: 100%;
     background-color: #1BA4FC;
     padding: 10px 5%;
     color: #ffffff;
