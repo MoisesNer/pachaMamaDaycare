@@ -1,3 +1,4 @@
+// comment
 /*SHOPPING-CART*/
 window.onload=function(){
 let openPopup = document.getElementById('btn-open-popup'),
