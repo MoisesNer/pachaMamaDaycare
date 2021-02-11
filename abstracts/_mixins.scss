@@ -1,0 +1,25 @@
+@mixin width-margin {
+    width: 80%;
+    margin: auto;
+}
+
+@mixin define-button{
+    text-align: center;
+    padding: 7px 15px;
+    margin: auto;
+    background-color: $-purple;
+    color: $-white; 
+    font-size: 1.2rem;
+    text-decoration: none;
+    // letter-spacing: .4rem;
+    display: inline-block;
+    animation: drop 1.5s ease;
+    box-shadow: 0px 10px 14px -7px #09191b;
+    &:active{
+        @extend %linkactive;
+    }
+    &:hover{
+        background-color: $-pink;
+        @extend %linkhover;
+    }    
+}
