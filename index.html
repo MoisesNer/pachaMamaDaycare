@@ -80,7 +80,14 @@
                   <div class="popup" id="popup">
                       <a href="#" id="btn-close-popup" class="btn-close-popup" target="_self"><i class="fas fa-times"></i></a>
                       <p class="my-cart">My Cart</p>
-                      
+                      <div>
+                          <p>There is nothing in your Cart, select how many items you want and press the cart item to add them here!</p>
+                      </div>
+                      <div  class='cartItem'>
+                          <h5 id="cartPrice" class="cartPrice">$ 40.00</h5>
+                          <h5 id="nameItem" class="nameItem">Product Name</h5>
+                          <h6 id="qtyItem" class="qtyItem">6 items</h6>
+                      </div>
                   </div>
               </div>
           </nav>
@@ -120,9 +127,9 @@
                             <h5 id="price">$19.95</h5>
                             <form action="">
 
-                              <input type="text" id="qty" placeholder="Qty">
-                              <p>
-                                    <a id="AddCart" class="fas fa-shopping-cart"></a>
+                              <input type="text" class="qty" id="qty" placeholder="Qty">
+                                <p>
+                                    <a id="AddCart" class="fas fa-shopping-cart add-cart"></a>
                                 </p>
                                 <!-- til here -->
                             </form>
@@ -140,14 +147,14 @@
                     </a>     
                     <div class="product-info">
                         <div>
-                            <h5>JoinJoy Kitchen</h5>
+                            <h5 id="artName">JoinJoy Kitchen</h5>
                         </div>
                         <div class="price-qty">
-                            <h5>$33.33</h5>
+                            <h5 id="price">$33.33</h5>
                             <form action="">
-                                <input type="text" id="qty" placeholder="Qty">
+                                <input type="text" class="qty" id="qty" placeholder="Qty">
                                 <p>
-                                    <a id="AddCart" class="fas fa-shopping-cart"></a>
+                                    <a id="AddCart" class="fas fa-shopping-cart add-cart"></a>
                                 </p>
                             </form>
                         </div>
@@ -162,14 +169,14 @@
                     </a>     
                     <div class="product-info">
                         <div>
-                            <h5>Holy Stone Car</h5>
+                            <h5 id="artName">Holy Stone Car</h5>
                         </div>
                         <div class="price-qty">
-                            <h5>$26.99</h5>
+                            <h5 id="price">$26.99</h5>
                             <form action="">
-                                <input type="text" id="qty" placeholder="Qty">
+                                <input type="text" class="qty" id="qty" placeholder="Qty">
                                 <p>
-                                    <a id="AddCart" class="fas fa-shopping-cart"></a>
+                                    <a id="AddCart" class="fas fa-shopping-cart add-cart"></a>
                                 </p>
                             </form>
                         </div>
@@ -197,10 +204,10 @@
                 <img src="/files/products/computer.png" alt="Product 1 picture">        
                 <div class="product-info">
                     <div>
-                        <h5>Leap Frog</h5>
+                        <h5 id="artName">Leap Frog</h5>
                     </div>
                     <div class="price-qty">
-                        <h5>$29.95</h5>
+                        <h5 id="price">$29.95</h5>
                         <form action="">
                             <input type="text" id="qty" placeholder="Qty">
                             <p>
@@ -217,10 +224,10 @@
                 <img src="/files/products/spike.png" alt="Product 1 picture">        
                 <div class="product-info">
                     <div>
-                        <h5>Spike the Fine</h5>
+                        <h5 id="artName">Spike the Fine</h5>
                     </div>
                     <div class="price-qty">
-                        <h5>$19.00</h5>
+                        <h5 id="price">$19.00</h5>
                         <form action="">
                             <input type="text" id="qty" placeholder="Qty">
                             <p>
@@ -237,10 +244,10 @@
                 <img src="/files/products/rod.png" alt="Product 1 picture">        
                 <div class="product-info">
                     <div>
-                        <h5>Munchkin Fishin'</h5>
+                        <h5 id="artName">Munchkin Fishin'</h5>
                     </div>
                     <div class="price-qty">
-                        <h5>$12.89</h5>
+                        <h5 id="price">$12.89</h5>
                         <form action="">
                             <input type="text" id="qty" placeholder="Qty">
                             <p>
