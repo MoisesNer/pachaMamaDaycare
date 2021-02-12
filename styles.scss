@@ -539,7 +539,6 @@ h2{
                     }
                     .price-qty{
                         form{
-                            // border: red solid 3px;
                             position: absolute;
                             right: 25px;
                             bottom: 23px;
@@ -1367,7 +1366,7 @@ h2{
 
     // FEATURED PRODUCTS
     .featuredProducts{
-        //@include width-margin();
+        // @include width-margin();
         width:135%;
         display:flex;
         flex-direction: column;
