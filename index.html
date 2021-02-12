@@ -81,12 +81,16 @@
                       <a href="#" id="btn-close-popup" class="btn-close-popup" target="_self"><i class="fas fa-times"></i></a>
                       <p class="my-cart">My Cart</p>
                       <div>
-                          <p>There is nothing in your Cart, select how many items you want and press the cart item to add them here!</p>
+                          <!-- <p>There is nothing in your Cart, select how many items you want and press the cart item to add them here!</p> -->
                       </div>
-                      <div  class='cartItem'>
-                          <h5 id="cartPrice" class="cartPrice">$ 40.00</h5>
-                          <h5 id="nameItem" class="nameItem">Product Name</h5>
-                          <h6 id="qtyItem" class="qtyItem">6 items</h6>
+                      <div class='cartItem'>
+                          
+                        <p class="pItem">1 item(s)</p>
+                        <p>Product name</p>
+                        <p>$ 19.99</p>                      
+                          <a href="#" id='cart-item-remove' class="cart-item-remove">
+                              <i class='fas fa-trash'></i>
+                          </a>
                       </div>
                   </div>
               </div>
@@ -120,23 +124,20 @@
                     </a>     
                     <div class="product-info">
                         <div>
-                            <!-- from here -->
                             <h5 id="artName">Pounding Bench Wooden Toy</h5>
                         </div>
                         <div class="price-qty">
-                            <h5 id="price">$19.95</h5>
+                            <h5 id="price" class="price-item">$19.95</h5>
                             <form action="">
 
                               <input type="text" class="qty" id="qty" placeholder="Qty">
                                 <p>
                                     <a id="AddCart" class="fas fa-shopping-cart add-cart"></a>
                                 </p>
-                                <!-- til here -->
                             </form>
                         </div>
                     </div>
                 </div>
-
 
                 <div class="product-container">
                     <div class="category">
@@ -150,7 +151,7 @@
                             <h5 id="artName">JoinJoy Kitchen</h5>
                         </div>
                         <div class="price-qty">
-                            <h5 id="price">$33.33</h5>
+                            <h5 id="price" class="price-item">$33.33</h5>
                             <form action="">
                                 <input type="text" class="qty" id="qty" placeholder="Qty">
                                 <p>
@@ -172,7 +173,7 @@
                             <h5 id="artName">Holy Stone Car</h5>
                         </div>
                         <div class="price-qty">
-                            <h5 id="price">$26.99</h5>
+                            <h5 id="price" class="price-item">$26.99</h5>
                             <form action="">
                                 <input type="text" class="qty" id="qty" placeholder="Qty">
                                 <p>
@@ -209,9 +210,9 @@
                     <div class="price-qty">
                         <h5 id="price">$29.95</h5>
                         <form action="">
-                            <input type="text" id="qty" placeholder="Qty">
+                            <input type="text" class="qty" id="qty" placeholder="Qty">
                             <p>
-                                <a class="fas fa-shopping-cart"></a>
+                                <a id="AddCart" class="fas fa-shopping-cart add-cart"></a>
                             </p>
                         </form>
                     </div>
@@ -229,9 +230,9 @@
                     <div class="price-qty">
                         <h5 id="price">$19.00</h5>
                         <form action="">
-                            <input type="text" id="qty" placeholder="Qty">
+                            <input type="text" class="qty" id="qty" placeholder="Qty">
                             <p>
-                                <a class="fas fa-shopping-cart"></a>
+                                <a id="AddCart" class="fas fa-shopping-cart add-cart"></a>
                             </p>
                         </form>
                     </div>
@@ -249,9 +250,9 @@
                     <div class="price-qty">
                         <h5 id="price">$12.89</h5>
                         <form action="">
-                            <input type="text" id="qty" placeholder="Qty">
+                            <input type="text" class="qty" id="qty" placeholder="Qty">
                             <p>
-                                <a class="fas fa-shopping-cart"></a>
+                                <a id="AddCart" class="fas fa-shopping-cart add-cart"></a>
                             </p>
                         </form>
                     </div>
