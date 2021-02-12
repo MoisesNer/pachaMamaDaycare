@@ -36,12 +36,13 @@ window.onload=function(){
   });
   
   /*CLICK ON PRODUCT FOR MOBILE AND TABLE*/
-  
+  window.onload=function(){
   openPopsMobile.addEventListener('click', function(e){
       e.preventDefault();
       submenu.classList.add('active');
       pops.classList.add('active');
   });
+
   closePopsMobile.addEventListener('click', function(e){
       e.preventDefault();
       submenu.classList.remove('active');
@@ -49,7 +50,7 @@ window.onload=function(){
   });
  
   }
-  
+}
   /*CAROUSSEL*/ 
   let slideIndex = 1;
   showSlides(slideIndex);
@@ -77,7 +78,7 @@ window.onload=function(){
         dots[i].className = dots[i].className.replace(" active", "");
     }
   
-  slides[slideIndex-1].style.display = "block";
+ slides[slideIndex-1].style.display = "block";
   
     dots[slideIndex-1].className += " active";
   }
@@ -144,3 +145,7 @@ addToCart.forEach(function(btn){
     console.log(totalMoney);
   };
 });
+
+
+
+/*BURGER MENU*/
