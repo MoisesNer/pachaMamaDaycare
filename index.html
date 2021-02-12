@@ -31,7 +31,7 @@
 
       <ul class="nav-ul">
           <li>
-              <a href="/product.html" id="open-popup" class="open-popup">Products</a>
+              <a href="#" id="open-popup" class="open-popup" target="_self">Products</a>
           </li>
           <li>
               <a href="#">About</a>
@@ -57,7 +57,7 @@
       <div class="submenu" id="submenu">
           <div class="pops" id="pops">
              <!-- <a href="#" id="close-popup" class="close-popup"><i class="fas fa-times"></i></a>-->
-              <ul id="close-popup" class="close-popup">
+              <ul>
                   <li>Decor</li>
                   <li>Furniture</li>
               </ul>
@@ -78,7 +78,7 @@
               <!-- <button id="btn-abrir-popup" class="btn-abrir-popup">Abrir Ventana Emergente</button>-->
               <div class="overlay" id="overlay">
                   <div class="popup" id="popup">
-                      <a href="#" id="btn-close-popup" class="btn-close-popup"><i class="fas fa-times"></i></a>
+                      <a href="#" id="btn-close-popup" class="btn-close-popup" target="_self"><i class="fas fa-times"></i></a>
                       <p class="my-cart">My Cart</p>
                       <div>
                           <p>There is nothing in your Cart, select how many items you want and press the cart item to add them here!</p>
@@ -93,7 +93,7 @@
           </nav>
 
     <!-- HERO SECTION -->
-    <section class="hero">
+    <section class="hero" id="close-popup" class="close-popup">
         <div class="hero-content">
             <img src="/files/MamaPachaLogoWeb.png" alt="">
             <h1>Welcome to your daycare supplier.</h1>
@@ -160,7 +160,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="product-container">
+                <div class="product-container product-container3">
                     <div class="category">
                         <a href="#">Learning & Education</a>
                     </div>
