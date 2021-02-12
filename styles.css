@@ -260,6 +260,7 @@ h2 {
         line-height: 40px; }
   .featuredProducts {
     width: 80%;
+
     margin: auto; }
     .featuredProducts .section-title {
       margin-top: 110px;
@@ -1174,6 +1175,7 @@ h2 {
                 cursor: pointer; }
                 .latestProducts .latest-product .product-container .product-info .price-qty form p a:hover {
                   color: #707070; }
+
   footer {
     margin-top: 120px;
     width: 150%;
@@ -1516,7 +1518,6 @@ h2 {
                   cursor: pointer; }
                   .similar .featured-product .product-container .product-info .price-qty form p a:hover {
                     color: #707070; } }
-
 /*--PHONE BREAKPOINT--*/
 @media (max-width: 767px) {
   nav {
@@ -2016,8 +2017,292 @@ h2 {
           color: #ffffff;
           line-height: 2.5; }
   /*PRODUCT*/
-  .product-sample {
+  body {
+    width: 100%;
+  }
+  body nav {
+    background-color: #ffffff;
+    -webkit-box-shadow: 0px 5px 40px -10px rgba(0, 0, 0, 0.3);
+    box-shadow: 0px 5px 40px -10px rgba(0, 0, 0, 0.3);
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: distribute;
+    justify-content: space-around;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    padding: 10px 0;
+    position: fixed;
+    top: 0;
+    z-index: 100;
+  }
+  body nav .burguerMenu {
+    visibility: visible;
+  }
+  body nav .burguerMenu .menuLink {
+    list-style-type: none;
+    color: #313131;
+    padding-top: 20px;
+    font-size: 25px;
+  }
+  body .nav-section {
+    width: 50%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+  }
+  body .nav-section ul {
+    visibility: hidden;
+    display: none;
+  }
+  body .nav-section ul li {
+    list-style: none;
+    text-decoration: none;
+    display: inline-block;
+  }
+  body .nav-section ul li a {
+    line-height: 2;
+    font-size: 1.3rem;
+    text-decoration: none;
+    color: #313131;
+    padding: 5px 15px;
+  }
+  body nav .logoNav {
+    width: 10%;
+    display: inline;
+  }
+  body nav .logoNav img {
+    height: 45px;
+  }
+  body nav .nav-icons {
+    list-style: none;
+    padding: 0;
+  }
+  body nav .nav-icons li {
+    display: inline-block;
+    background-color: #1BA4FC;
+    border-radius: 50%;
+    width: 45px;
+    height: 45px;
+    text-align: center;
+    margin-right: 18px;
+  }
+  body nav .nav-icons li a {
+    font-size: 1.8rem;
+    color: #ffffff;
+  }
+  body .fas {
+    font-size: 20px;
+    text-align: center;
+    padding-top: 7px;
+  }
+  body nav .nav-icons li:nth-child(2) {
+    background-color: #DF1988;
+    margin-right: 18px;
+  }
+  body nav .nav-icons li:nth-child(3) {
+    background-color: #F4CC2E;
+  }
+  body .btn-open-popup {
+    cursor: pointer;
+    -webkit-transition: .3s ease all;
+    transition: .3s ease all;
+    cursor: pointer;
+  }
+  body .submenu {
+    position: fixed;
+    margin-top: 300px;
+    left: 0;
+    right: 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    visibility: hidden;
+    width: 100%;
+  }
+  body .submenu.active {
+    visibility: visible;
+  }
+  body .pops {
+    background: white;
+    -webkit-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.3);
+            box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.3);
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    font-family: 'Montserrat', sans-serif;
+    padding: 20px;
+    text-align: center;
+    width: 100%;
+    -ms-flex-item-align: start;
+        align-self: flex-start;
+    -webkit-transition: .3s ease all;
+    transition: .3s ease all;
+    -webkit-transform: scale(0.7);
+            transform: scale(0.7);
+    opacity: 0;
+  }
+  body .pops ul {
+    list-style: none;
+    font-size: 16px;
+    line-height: 16px;
+    display: block;
+    text-align: right;
+    -webkit-transition: .3s ease all;
+    transition: .3s ease all;
+    color: black;
+    padding-top: 15px;
+  }
+  body .pops ul :hover {
+    color: gray;
+  }
+  body .pops ul li {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    text-align: left;
+    list-style: none;
+    font-size: 20px;
+    margin-bottom: 15px;
+  }
+  body .pops ul li:hover {
+    color: gray;
+  }
+  body .pops ul .toys {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  body .pops ul .sub {
+    list-style: none;
+    font-size: 18px;
+    font-weight: 300;
+  }
+  body .pops ul li:first-child {
+    color: black;
+  }
+  body .pops .close-popup {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    width: 30%;
+  }
+  body .pops.active {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    opacity: 1;
+  }
+  body .btn-open-popup {
+    cursor: pointer;
+    -webkit-transition: .3s ease all;
+    transition: .3s ease all;
+    cursor: pointer;
+  }
+  body .overlay {
+    position: fixed;
+    top: 68px;
+    left: 0;
+    right: 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: row-reverse;
+            flex-direction: row-reverse;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    visibility: hidden;
+  }
+  body .overlay.active {
+    visibility: visible;
+  }
+  body .popup {
+    background: white;
+    -webkit-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.3);
+            box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.3);
+    border-radius: 2px;
+    font-family: 'Montserrat', sans-serif;
+    margin-right: 15%;
+    padding: 20px;
+    text-align: center;
+    width: 350px;
+    -ms-flex-item-align: start;
+        align-self: flex-start;
+    -webkit-transition: .3s ease all;
+    transition: .3s ease all;
+    -webkit-transform: scale(0.7);
+            transform: scale(0.7);
+    opacity: 0;
+  }
+  body .popup .btn-close-popup {
+    font-size: 16px;
+    line-height: 16px;
+    display: block;
+    text-align: right;
+    -webkit-transition: .3s ease all;
+    transition: .3s ease all;
+    color: #707070;
+  }
+  body .popup .btn-close-popup :hover {
+    color: #000;
+  }
+  body .popup .my-cart {
+    font-size: 25px;
+    font-weight: 600;
+    margin-top: 15px;
+    margin-bottom: 10px;
+    color: #313131;
+  }
+  body .popup.active {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    opacity: 1;
+  }
+  body .product-sample {
     margin-top: 100px;
+
     width: 200%;
     display: flex;
     flex-direction: column;
@@ -2196,6 +2481,7 @@ h2 {
         text-align: left;
         width: 100%; }
   .similar {
+
     margin: 55px auto;
     display: flex;
     flex-direction: row;
