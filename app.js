@@ -36,12 +36,13 @@ window.onload=function(){
   });
   
   /*CLICK ON PRODUCT FOR MOBILE AND TABLE*/
-  
+  window.onload=function(){
   openPopsMobile.addEventListener('click', function(e){
       e.preventDefault();
       submenu.classList.add('active');
       pops.classList.add('active');
   });
+
   closePopsMobile.addEventListener('click', function(e){
       e.preventDefault();
       submenu.classList.remove('active');
@@ -49,7 +50,7 @@ window.onload=function(){
   });
  
   }
-  
+}
   /*CAROUSSEL*/ 
   let slideIndex = 1;
   showSlides(slideIndex);
@@ -77,7 +78,7 @@ window.onload=function(){
         dots[i].className = dots[i].className.replace(" active", "");
     }
   
-  slides[slideIndex-1].style.display = "block";
+ slides[slideIndex-1].style.display = "block";
   
     dots[slideIndex-1].className += " active";
   }
@@ -125,28 +126,23 @@ addToCart.forEach(function(btn){
     
     alert('item added to the cart');
     
-    
-    showTotals();
+    let totalAmount = 0;
+    totalAmount += (getTotals(item))
+    document.getElementById('cart-total').textContent = totalAmount.toFixed(2);
   })
+  
+  function getTotals(item){
+    
+    const totalPriceItem = parseInt(item.quantity) * item.price
+   
+    return totalPriceItem;
+  }
 
-  function showTotals(){
-    const total = [];
-    const items = document.querySelectorAll('.price-item');
 
-    items.forEach(function(item){
-      total.push(parseFloat(item.textContent.slice(1).trim()))//getting the amount
-    });
-    console.log(total);//array con cantidades
-
-    const totalMoney = total.reduce(function(total, item){
-      total += item;
-      return total;
-    }, 0);
-    const finalMoney = totalMoney.toFixed(2);
-
-    console.log(finalMoney);
-    document.getElementById('cart-total').textContent = finalMoney;
-    document.querySelector('.price-item').textContent = finalMoney;
-    document.getElementById('item-count').textContent = total.length;
-  };
+//PRINT THE TOTAL
 });
+//TOTAL AMOUNT
+
+
+
+/*BURGER MENU*/
