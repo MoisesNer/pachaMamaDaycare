@@ -276,10 +276,28 @@ h2{
             margin-bottom: 10px;
             color:black;
             }
+            .cartLegend{
+                margin: 10px 0;
+                font-size: 1.4rem;
+            }
+            .totalAmount{
+                display: none;
+            }
+            .trashAll{
+                color: $-white;
+                    margin-top: 6px;
+                    margin-left: 10px;
+                    background-color: $-turquoise;
+                    border-radius: 50%;
+                    width: 38px;
+                    height: 30px;
+                    text-align: center;
+                    cursor: pointer;
+            }
             .cartItem{
                 display: flex;
                 justify-content: center;
-                // align-items: center;
+
                 p{
                     margin: 15px 7px;
                     font-size: 1rem;

@@ -296,39 +296,49 @@ h2 {
   .overlay .popup .btn-close-popup :hover {
     color: #000;
   }
-  .overlay .popup .my-cart {
-    font-size: 25px;
-    font-weight: 600;
-    margin-top: 15px;
-    margin-bottom: 10px;
-    color: black;
-  }
-  .overlay .popup .cartItem {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-  }
-  .overlay .popup .cartItem p {
-    margin: 15px 7px;
-    font-size: 1rem;
-  }
-  .overlay .popup .cartItem p:nth-child(2) {
-    width: 200px;
-  }
-  .overlay .popup .cartItem i {
-    color: #ffffff;
-    margin-top: 6px;
-    margin-left: 10px;
-    background-color: #9E2B87;
-    border-radius: 50%;
-    width: 38px;
-    height: 30px;
-    text-align: center;
-    cursor: pointer;
-  }
+       .overlay .popup .my-cart {
+        font-size: 25px;
+        font-weight: 600;
+        margin-top: 15px;
+        margin-bottom: 10px;
+        color: black; }
+      .overlay .popup .cartLegend {
+        margin: 10px 0;
+        font-size: 1.4rem; }
+      .overlay .popup .totalAmount {
+        display: none; }
+      .overlay .popup .trashAll {
+        color: #ffffff;
+        margin-top: 6px;
+        margin-left: 10px;
+        background-color: #27EAB8;
+        border-radius: 50%;
+        width: 38px;
+        height: 30px;
+        text-align: center;
+        cursor: pointer; }
+    
+      .overlay .popup .cartItem {
+        display: flex;
+        justify-content: center; }
+        display: -webkit-box;
+        display: -ms-flexbox;
+        .overlay .popup .cartItem p {
+          margin: 15px 7px;
+          font-size: 1rem; }
+        .overlay .popup .cartItem p:nth-child(2) {
+          width: 200px; }
+        .overlay .popup .cartItem i {
+          color: #ffffff;
+          margin-top: 6px;
+          margin-left: 10px;
+          background-color: #9E2B87;
+          border-radius: 50%;
+          width: 38px;
+          height: 30px;
+          text-align: center;
+          cursor: pointer; }
+
   .overlay.active {
     visibility: visible;
   }
@@ -3772,6 +3782,7 @@ h2 {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+
     margin-bottom: 20px;
   }
   footer .ourBrands .carousell .mySlides img {
@@ -3828,6 +3839,7 @@ h2 {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
@@ -4162,6 +4174,7 @@ h2 {
   }
   body .product-sample .category {
     background-color: #1BA4FC;
+
     padding: 10px 0;
     color: #ffffff;
     text-align: center;

@@ -1,4 +1,8 @@
+// GLOBAL VARIABLES
+let totalAmount = 0;
+
 /*SHOPPING-CART*/
+
 window.onload=function(){
   let openPopup = document.getElementById('btn-open-popup'),
       overlay = document.getElementById('overlay'),
@@ -101,7 +105,9 @@ addToCart.forEach(function(btn){
     let name = event.target.parentElement.parentElement.parentElement.parentElement.firstChild.nextSibling.firstChild.nextSibling.innerText;
     let price = event.target.parentElement.parentElement.parentElement.firstChild.nextSibling.textContent;
     let quantity = parseInt(event.target.parentElement.parentElement.parentElement.firstChild.nextSibling.nextSibling.nextSibling.firstChild.nextSibling.value);
-    
+    let legend = document.getElementById('cartLegend');
+    let totalAmountLeyend = document.getElementById('totalAmount');
+
     const item = {};
     item.name = name;
     item.price = price.slice(1).trim();
@@ -109,6 +115,7 @@ addToCart.forEach(function(btn){
 
     const cartItem = document.createElement('div')
     cartItem.classList.add('cartItem');
+    cartItem.setAttribute("id", "cartItem");
 
     cartItem.innerHTML =
 
@@ -120,15 +127,19 @@ addToCart.forEach(function(btn){
       <i class='fas fa-trash'></i>
     </a>
     `
+    
     //PRINTING INTO CART
     popup = document.getElementById('popup')
     popup.appendChild(cartItem);
     
     alert('item added to the cart');
-    
-    let totalAmount = 0;
+
+    legend.style.display='none';
+    totalAmountLeyend.style.display='block'
+
     totalAmount += (getTotals(item))
     document.getElementById('cart-total').textContent = totalAmount.toFixed(2);
+
   })
   
   function getTotals(item){
@@ -138,11 +149,27 @@ addToCart.forEach(function(btn){
     return totalPriceItem;
   }
 
-
-//PRINT THE TOTAL
 });
-//TOTAL AMOUNT
+
+//REMOVE ALL ITEMS IN THE CART
+const trashAll= document.getElementById('trashAll');
+trashAll.addEventListener('click', function(){
+  while(document.contains(document.getElementById("cartItem"))) {
+    document.getElementById("cartItem").remove();
+  }
+  totalAmount = 0;
+  document.getElementById('cart-total').textContent = "00.00";
+});
 
 
+//ONE ITEM FROM THE CART
+// const trashAll= document.getElementById('trashAll');
 
+// trashAll.addEventListener('click', function(event){
+//   let totalAmount = event.target.parentElement;
+//   console.log(totalAmount);
+  
+  // let allCartItems = document.getElementById('cartItem')
+  // allCartItems.remove();
+// })
 /*BURGER MENU*/
