@@ -2578,8 +2578,9 @@ h2 {
   .similar .featured-product .product-container .product-info .price-qty form p a:hover {
     color: #707070;
   }
-  .similar footer {
-    margin-top: 120px;
+  .similar .footer {
+    padding-top: 10px;
+    margin: 0px;
     width: 100%;
     background-color: #FCDE60;
     display: -webkit-box;
@@ -2590,7 +2591,7 @@ h2 {
         -ms-flex-direction: column;
             flex-direction: column;
   }
-  .similar footer .ourBrands {
+  .similar .footer .ourBrands {
     width: 100%;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -2606,11 +2607,11 @@ h2 {
         -ms-flex-direction: column;
             flex-direction: column;
   }
-  .similar footer .ourBrands h2 {
+  .similar .footer .ourBrands h2 {
     width: 100%;
     padding: 50px 0;
   }
-  .similar footer .ourBrands .carousell {
+  .similar .footer .ourBrands .carousell {
     width: 100%;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -2625,18 +2626,17 @@ h2 {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    width: 80%;
     margin: auto;
     /* Hide the images by default */
   }
-  .similar footer .ourBrands .carousell .mySlides {
+  .similar .footer .ourBrands .carousell .mySlides {
     height: 20vh;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
     margin-bottom: 20px;
   }
-  .similar footer .ourBrands .carousell .mySlides img {
+  .similar .footer .ourBrands .carousell .mySlides img {
     width: 200px;
     margin: 0 30px;
   }
@@ -3728,7 +3728,7 @@ h2 {
   }
   footer {
     margin-top: 120px;
-    width: 150%;
+    width: 100%;
     background-color: #FCDE60;
   }
   footer .ourBrands {

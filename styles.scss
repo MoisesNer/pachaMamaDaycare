@@ -2294,8 +2294,9 @@ h2{
             }
         }
         // FOOTER
-    footer{
-        margin-top: 120px;
+    .footer{
+        padding-top:10px;
+        margin:0px;
         width:100%;
         background-color: $-yellow;
         display:flex;
@@ -2323,7 +2324,7 @@ h2{
                 justify-content: center;
                 align-items: center;
                 flex-direction: column;
-                width: 80%;
+                
                 margin: auto;
                 
                 
@@ -3372,7 +3373,7 @@ h2{
     // FOOTER
     footer{
         margin-top: 120px;
-        width:150%;
+        width:100%;
         background-color: $-yellow;
         // border: red solid 3px;
         
