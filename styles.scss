@@ -154,7 +154,7 @@ h2{
         align-items: flex-start;
         justify-content: flex-start;
         visibility: hidden;
-        width: 90%;
+        width: 100%;
     }
 
     .submenu.active {
@@ -1220,8 +1220,11 @@ h2{
         width: 100%;
         z-index: 100;
         .burguerMenu{
+            
+            
             visibility:hidden;
             display:none !important;
+
         }
     }
         .nav-section{
@@ -2531,6 +2534,7 @@ h2{
             margin-left:0px;
             margin-right:10px;
             visibility: visible;
+            
             .menuLink{
                 list-style-type: none;
                 color:$-notBlack;
