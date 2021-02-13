@@ -126,25 +126,22 @@ addToCart.forEach(function(btn){
     
     alert('item added to the cart');
     
-    
-    showTotal();
+    let totalAmount = 0;
+    totalAmount += (getTotals(item))
+    document.getElementById('cart-total').textContent = totalAmount.toFixed(2);
   })
-
-  function showTotal(){
-    const total = [];
-    const items = document.querySelectorAll('.price-item');
-
-    items.forEach(function(item){
-      total.push(parseFloat(item.textContent.slice(1).trim()))//getting the amount
-    });
+  
+  function getTotals(item){
     
-    const totalMoney = total.reduce(function(total, item){
-      total += item;
-      return total;
-    }, 0);
-    console.log(totalMoney);
-  };
+    const totalPriceItem = parseInt(item.quantity) * item.price
+   
+    return totalPriceItem;
+  }
+
+
+//PRINT THE TOTAL
 });
+//TOTAL AMOUNT
 
 
 
