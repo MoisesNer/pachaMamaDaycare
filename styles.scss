@@ -431,6 +431,7 @@ h2{
                     align-items: center;
                     right: 10px;
                     top: 10px;
+                    z-index:30;
                     
                     a{
                         text-align: center;
@@ -445,19 +446,33 @@ h2{
                         
                         
                     }
-                }
-                a{
-                    display:flex;
-                    flex-direction:column;
-                    padding:0 10px;
-                img{
-                    
-                    width: 70%;
-                    align-self: center;
-                    margin: 40px auto;
-                    
+		
                     
                 }
+                
+                .cont-img{
+                        margin: 0 auto; 
+                        overflow: hidden;
+                        :hover{
+                            transform: scale(1.1,1.1);
+                         } 
+                        a{
+                            display:flex;
+                            flex-direction:column;
+                            padding:0 10px;
+                         img{
+                    
+                            width: 70%;
+                            align-self: center;
+                            margin: 40px auto;
+                            transition: transform 3s;
+                            z-index: -1;
+                        }
+                         
+                     }
+                     
+                
+                
             }
                 
                 .product-info{
@@ -539,6 +554,7 @@ h2{
 
     // LATEST PRODUCTS
     .latestProducts{
+        //@include width-margin();
         width:100%;
         display:flex;
         flex-direction:column;
@@ -549,7 +565,7 @@ h2{
             display: flex;
             width:90%;
             flex-wrap: wrap;
-            border-bottom: $-purple solid 5px;
+            border-bottom: $-turquoise solid 5px;
             justify-content: space-between;
             align-items: center;
 
@@ -558,14 +574,17 @@ h2{
                 color: $-blue;
                 font-weight: bold;
             }
+    
         }
         .latest-product{
             display: flex;
+            flex-direction:row;
             justify-content: space-around;
             align-items: center;
             margin: auto;
             padding-top:40px;
             width:90%;
+            //height:400px;
             
             .product-container{
                 margin: 0 5px;
@@ -586,6 +605,7 @@ h2{
                     align-items: center;
                     right: 10px;
                     top: 10px;
+                    z-index:30;
                     
                     a{
                         text-align: center;
@@ -600,32 +620,59 @@ h2{
                         
                         
                     }
-                }
-                img{
-                    width: 240px;
-                    height: 220px;
-                    margin: 50px 70px 30px 70px;
+		
                     
                 }
                 
+                .cont-img{
+                        margin: 0 auto; 
+                        overflow: hidden;
+                        :hover{
+                            transform: scale(1.1,1.1);
+                         } 
+                        a{
+                            display:flex;
+                            flex-direction:column;
+                            padding:0 10px;
+                         img{
+                    
+                            width: 70%;
+                            align-self: center;
+                            margin: 40px auto;
+                            transition: transform 3s;
+                            z-index: -1;
+                        }
+                         
+                     }
+                     
+                
+                
+            }
+                
                 .product-info{
                     border-top: solid $-notBlack 2px;
-                    //margin: auto;
+                    margin: auto;
                     display:flex;
                     flex-direction:column;
                     justify-content: center;
                     padding-top: 15px;
                     width:90%;
+                
                     //width: 320px;
-                    margin:auto;
+                    margin-bottom: 17px;
                     h5{
+                        align-items: center;
                         font-size: 1.3rem;
                         font-weight: 500;
-                        margin-bottom: 20px;
+                        padding:auto;
+                        margin-bottom: 10px;
                     }
                     .price-qty{
-                        .price{
-                            font-weight:550;
+                        display:flex;
+                        margin-top:20px;
+                        h5{
+                            font-size:20px;
+                            font-weight: 550;
                         }
                         form{
                             position: absolute;

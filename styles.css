@@ -493,6 +493,7 @@ h2 {
             align-items: center;
     right: 10px;
     top: 10px;
+    z-index: 30;
   }
   .featuredProducts .featured-product .product-container .category a {
     text-align: center;
@@ -505,7 +506,15 @@ h2 {
     display: inline-block;
     border-radius: 5px;
   }
-  .featuredProducts .featured-product .product-container a {
+  .featuredProducts .featured-product .product-container .cont-img {
+    margin: 0 auto;
+    overflow: hidden;
+  }
+  .featuredProducts .featured-product .product-container .cont-img :hover {
+    -webkit-transform: scale(1.1, 1.1);
+            transform: scale(1.1, 1.1);
+  }
+  .featuredProducts .featured-product .product-container .cont-img a {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -515,12 +524,17 @@ h2 {
             flex-direction: column;
     padding: 0 10px;
   }
-  .featuredProducts .featured-product .product-container a img {
+  .featuredProducts .featured-product .product-container .cont-img a img {
     width: 70%;
     -ms-flex-item-align: center;
         -ms-grid-row-align: center;
         align-self: center;
     margin: 40px auto;
+    -webkit-transition: -webkit-transform 3s;
+    transition: -webkit-transform 3s;
+    transition: transform 3s;
+    transition: transform 3s, -webkit-transform 3s;
+    z-index: -1;
   }
   .featuredProducts .featured-product .product-container .product-info {
     border-top: solid #313131 2px;
@@ -625,7 +639,7 @@ h2 {
     width: 90%;
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
-    border-bottom: #9E2B87 solid 5px;
+    border-bottom: #27EAB8 solid 5px;
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
@@ -642,6 +656,10 @@ h2 {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
     -ms-flex-pack: distribute;
         justify-content: space-around;
     -webkit-box-align: center;
@@ -686,6 +704,7 @@ h2 {
             align-items: center;
     right: 10px;
     top: 10px;
+    z-index: 30;
   }
   .latestProducts .latest-product .product-container .category a {
     text-align: center;
@@ -698,13 +717,39 @@ h2 {
     display: inline-block;
     border-radius: 5px;
   }
-  .latestProducts .latest-product .product-container img {
-    width: 240px;
-    height: 220px;
-    margin: 50px 70px 30px 70px;
+  .latestProducts .latest-product .product-container .cont-img {
+    margin: 0 auto;
+    overflow: hidden;
+  }
+  .latestProducts .latest-product .product-container .cont-img :hover {
+    -webkit-transform: scale(1.1, 1.1);
+            transform: scale(1.1, 1.1);
+  }
+  .latestProducts .latest-product .product-container .cont-img a {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    padding: 0 10px;
+  }
+  .latestProducts .latest-product .product-container .cont-img a img {
+    width: 70%;
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+    margin: 40px auto;
+    -webkit-transition: -webkit-transform 3s;
+    transition: -webkit-transform 3s;
+    transition: transform 3s;
+    transition: transform 3s, -webkit-transform 3s;
+    z-index: -1;
   }
   .latestProducts .latest-product .product-container .product-info {
     border-top: solid #313131 2px;
+    margin: auto;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -717,14 +762,25 @@ h2 {
             justify-content: center;
     padding-top: 15px;
     width: 90%;
-    margin: auto;
+    margin-bottom: 17px;
   }
   .latestProducts .latest-product .product-container .product-info h5 {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     font-size: 1.3rem;
     font-weight: 500;
-    margin-bottom: 20px;
+    padding: auto;
+    margin-bottom: 10px;
   }
-  .latestProducts .latest-product .product-container .product-info .price-qty .price {
+  .latestProducts .latest-product .product-container .product-info .price-qty {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin-top: 20px;
+  }
+  .latestProducts .latest-product .product-container .product-info .price-qty h5 {
+    font-size: 20px;
     font-weight: 550;
   }
   .latestProducts .latest-product .product-container .product-info .price-qty form {
