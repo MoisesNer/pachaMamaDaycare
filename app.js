@@ -186,7 +186,6 @@ trashOn.forEach(function(btn){
   }
 });
 
-
 /*BURGER MENU*/
 function myFunction() {
   var x = document.getElementById("myLinks");
@@ -196,3 +195,4 @@ function myFunction() {
     x.style.display = "block";
   }
 }
+
