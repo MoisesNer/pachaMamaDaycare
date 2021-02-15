@@ -123,8 +123,8 @@ addToCart.forEach(function(btn){
     <p class="pItem">${item.quantity} item(s)</p>
     <p>${item.name}</p>
     <p>$ ${item.price}</p>                      
-    <a href="#" id='cart-item-remove' class="cart-item-remove">
-      <i class='fas fa-trash'></i>
+    <a href="#" class="cart-item-remove tOne" id='trashOne'>
+      <i class="fas fa-backspace"></i>
     </a>
     `
     
@@ -162,16 +162,30 @@ trashAll.addEventListener('click', function(){
 });
 
 
-//ONE ITEM FROM THE CART
-// const trashAll= document.getElementById('trashAll');
+//REMOVE ONE ITEM FROM THE CART
+const trashOn= document.querySelectorAll('.tOne');
 
-// trashAll.addEventListener('click', function(event){
-//   let totalAmount = event.target.parentElement;
-//   console.log(totalAmount);
-  
-  // let allCartItems = document.getElementById('cartItem')
-  // allCartItems.remove();
-// })
+trashOn.forEach(function(btn){
+
+  btn.addEventListener('click', function(event){
+    let cartItem = event.target.parentElement.parentElement;
+    let valueItem = event.target.parentElement.parentElement.firstChild.nextSibling.nextSibling.nextSibling.nextSibling.nextSibling.textContent;
+    const finalValue = valueItem.slice(1).trim();
+    
+    let totalItems = event.target.parentElement.parentElement.firstChild.nextSibling.textContent;
+    const totalNumber = totalItems.slice(1, 3).trim();
+    totalAmount -=(getSubstraction(finalValue, totalNumber));
+    
+    document.getElementById('cart-total').textContent = totalAmount.toFixed(2);
+    cartItem.remove();
+  })
+  //FUNCTION TO SUBSTRACT FROM TOTAL
+  function getSubstraction(final, total){
+    const difference = parseInt(total) *final
+    return difference;
+  }
+});
+
 /*BURGER MENU*/
 function myFunction() {
   var x = document.getElementById("myLinks");
@@ -181,3 +195,4 @@ function myFunction() {
     x.style.display = "block";
   }
 }
+
