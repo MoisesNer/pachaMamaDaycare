@@ -51,19 +51,6 @@ function imgGallery(){
 imgGallery();
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
   let totalAmount = 0;
   let openPopup = document.getElementById('btn-open-popup'),
       overlay = document.getElementById('overlay'),
@@ -80,8 +67,6 @@ imgGallery();
       overlay.classList.remove('active');
       popup.classList.remove('active');
   });
-  
-  
   
   let openPops = document.getElementById('open-popup'),
       submenu = document.getElementById('submenu'),
@@ -117,14 +102,10 @@ imgGallery();
   }
 
 
-
-
-
-
   //ADDING TO CART
 const addToCart = document.querySelectorAll('.add-cart');
 
-addToCart.forEach(function(btn){
+addToCart.forEach(function(btn, index){
 
   btn.addEventListener('click', function(event){
     let name = event.target.parentElement.parentElement.parentElement.parentElement.firstChild.nextSibling.firstChild.nextSibling.innerText;
@@ -140,7 +121,7 @@ addToCart.forEach(function(btn){
 
     const cartItem = document.createElement('div')
     cartItem.classList.add('cartItem');
-    cartItem.setAttribute("id", "cartItem");
+    cartItem.setAttribute("id", "cartItem-" + index);
 
     cartItem.innerHTML =
 
@@ -148,10 +129,16 @@ addToCart.forEach(function(btn){
     <p class="pItem">${item.quantity} item(s)</p>
     <p>${item.name}</p>
     <p>$ ${item.price}</p>                      
-    <a href="#" class="cart-item-remove tOne" id='trashOne'>
-      <i class="fas fa-backspace"></i>
-    </a>
     `
+
+    const cartButton = document.createElement('a')
+    cartButton.href = "#"
+    cartButton.classList.add('cart-item-remove')
+    cartButton.classList.add('tOne')
+    cartButton.id = "trash-" + index
+    cartButton.innerHTML = `<i class="fas fa-backspace"></i>`
+    cartButton.addEventListener('click', () => removeProduct(event, index, item))
+    cartItem.appendChild(cartButton)
     
     //PRINTING INTO CART
     popup = document.getElementById('popup')
@@ -178,38 +165,44 @@ addToCart.forEach(function(btn){
 
 //REMOVE ALL ITEMS IN THE CART
 const trashAll= document.getElementById('trashAll');
-trashAll.addEventListener('click', function(){
-  while(document.contains(document.getElementById("cartItem"))) {
-    document.getElementById("cartItem").remove();
-  }
-  totalAmount = 0;
-  document.getElementById('cart-total').textContent = "00.00";
-});
+// trashAll.addEventListener('click', function(){
+//   while(document.contains(document.getElementById("cartItem"))) {
+//     document.getElementsByTagName("cartItem").remove();
+//   }
+//   totalAmount = 0;
+//   document.getElementById('cart-total').textContent = "00.00";
+// });
 
 
 //REMOVE ONE ITEM FROM THE CART
-const trashOn= document.querySelectorAll('.tOne');
 
-trashOn.forEach(function(btn){
+function removeProduct(event, index, item){
+  const trashOn= document.querySelectorAll('.cartItem');
 
-  btn.addEventListener('click', function(event){
-    let cartItem = event.target.parentElement.parentElement;
-    let valueItem = event.target.parentElement.parentElement.firstChild.nextSibling.nextSibling.nextSibling.nextSibling.nextSibling.textContent;
-    const finalValue = valueItem.slice(1).trim();
+  trashOn.forEach((item) => {
+
+    if(item.id == `cartItem-${index}`){
+          let valueItem = item.firstChild.nextSibling.nextSibling.nextSibling.nextSibling.nextSibling.textContent
+          let finalValue = valueItem.slice(1).trim();
+
+          let totalItems = item.firstChild.nextSibling.textContent
+          let totalNumber = totalItems.slice(0, 3).trim();
+          totalAmount -=(getSubstraction(finalValue, totalNumber));
+          document.getElementById('cart-total').textContent = totalAmount.toFixed(2);
+
+          item.parentElement.removeChild(item)
+        
+          //FUNCTION TO SUBSTRACT FROM TOTAL
+          function getSubstraction(final, total){
+            const difference = parseInt(total) *final
+            return difference;
+          }
+    }
     
-    let totalItems = event.target.parentElement.parentElement.firstChild.nextSibling.textContent;
-    const totalNumber = totalItems.slice(1, 3).trim();
-    totalAmount -=(getSubstraction(finalValue, totalNumber));
-    
-    document.getElementById('cart-total').textContent = totalAmount.toFixed(2);
-    cartItem.remove();
-  })
-  //FUNCTION TO SUBSTRACT FROM TOTAL
-  function getSubstraction(final, total){
-    const difference = parseInt(total) *final
-    return difference;
-  }
-});
+  });
+}
+
+
 }
   /*CAROUSSEL*/ 
   let slideIndex = 1;
@@ -242,17 +235,6 @@ trashOn.forEach(function(btn){
   
     dots[slideIndex-1].className += " active";
   }
-
-//COLORDOT FUNCTION
-
-// let colorDot = document.querySelector(".circle");
-    
-//     colorDot.addEventListener('click', function(){
-//       document.colorDot.style.border = '2px solid black';
-//     });
-//     color.addEventListener("click", black);
-
- 
 
 /*BURGER MENU*/
 function myFunction() {
