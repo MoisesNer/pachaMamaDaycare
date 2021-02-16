@@ -1,9 +1,70 @@
 // GLOBAL VARIABLES
-let totalAmount = 0;
+
 
 /*SHOPPING-CART*/
 
 window.onload=function(){
+
+
+/*PRODUCT GALLERY */
+
+/*window.onload=function(){
+
+
+let mainImg1 =document.querySelector("#main1");
+let mainImg2 =document.querySelector("#main2");
+//mainImg2.style.display="none";
+mainImg2.style.visibility="hidden";
+let mainImg3 =document.querySelector("#main3");
+mainImg3.style.display="none";
+mainImg3.style.visibility="hidden";
+let mainImg4 =document.querySelector("#main4");
+mainImg4.style.display="none";
+mainImg4.style.visibility="hidden";
+
+
+let cont1 = document.querySelector('.small-cont-1');
+cont1.addEventListener('click', function(){
+  mainImg.style.display="none";
+  mainImg.style.visibility="hidden";
+  mainImg2.style.display="inline";
+  mainImg2.style.visibility="visible";
+});*/
+
+function imgGallery(){
+  const hightlight = document.querySelector('#main1');
+  const previews=document.querySelectorAll('.gallery-img img');
+
+  previews.forEach(preview=>{
+    preview.addEventListener('click', function(){
+      const smallSrc =this.src;
+      const bigSrc =smallSrc.replace('small', 'big');
+      hightlight.src=bigSrc;
+      //console.log(bigSrc);
+      previews.forEach(preview =>preview.classList.remove("img-active"));
+      preview.classList.add('img-active');
+    });
+  });
+  
+}
+
+imgGallery();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  let totalAmount = 0;
   let openPopup = document.getElementById('btn-open-popup'),
       overlay = document.getElementById('overlay'),
       popup = document.getElementById('popup'),
@@ -54,49 +115,13 @@ window.onload=function(){
   });
  
   }
-}
-  /*CAROUSSEL*/ 
-  let slideIndex = 1;
-  showSlides(slideIndex);
-  
-  // Next/previous controls
-  function plusSlides(n) {
-    showSlides(slideIndex += n);
-  }
-  
-  // Thumbnail image controls
-  function currentSlide(n) {
-    showSlides(slideIndex = n);
-  }
-  
-  function showSlides(n) {
-    let i;
-    let slides = document.getElementsByClassName("mySlides");
-    let dots = document.getElementsByClassName("dot");
-    if (n > slides.length) {slideIndex = 1}
-    if (n < 1) {slideIndex = slides.length}
-    for (i = 0; i < slides.length; i++) {
-        slides[i].style.display = "none";
-    }
-    for (i = 0; i < dots.length; i++) {
-        dots[i].className = dots[i].className.replace(" active", "");
-    }
-  
- slides[slideIndex-1].style.display = "block";
-  
-    dots[slideIndex-1].className += " active";
-  }
 
-//COLORDOT FUNCTION
 
-// let colorDot = document.querySelector(".circle");
-    
-//     colorDot.addEventListener('click', function(){
-//       document.colorDot.style.border = '2px solid black';
-//     });
-//     color.addEventListener("click", black);
 
- //ADDING TO CART
+
+
+
+  //ADDING TO CART
 const addToCart = document.querySelectorAll('.add-cart');
 
 addToCart.forEach(function(btn){
@@ -185,6 +210,49 @@ trashOn.forEach(function(btn){
     return difference;
   }
 });
+}
+  /*CAROUSSEL*/ 
+  let slideIndex = 1;
+  showSlides(slideIndex);
+  
+  // Next/previous controls
+  function plusSlides(n) {
+    showSlides(slideIndex += n);
+  }
+  
+  // Thumbnail image controls
+  function currentSlide(n) {
+    showSlides(slideIndex = n);
+  }
+  
+  function showSlides(n) {
+    let i;
+    let slides = document.getElementsByClassName("mySlides");
+    let dots = document.getElementsByClassName("dot");
+    if (n > slides.length) {slideIndex = 1}
+    if (n < 1) {slideIndex = slides.length}
+    for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+    }
+    for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+    }
+  
+ slides[slideIndex-1].style.display = "block";
+  
+    dots[slideIndex-1].className += " active";
+  }
+
+//COLORDOT FUNCTION
+
+// let colorDot = document.querySelector(".circle");
+    
+//     colorDot.addEventListener('click', function(){
+//       document.colorDot.style.border = '2px solid black';
+//     });
+//     color.addEventListener("click", black);
+
+ 
 
 /*BURGER MENU*/
 function myFunction() {
@@ -195,6 +263,9 @@ function myFunction() {
     x.style.display = "block";
   }
 }
+
+
+
 
 
 

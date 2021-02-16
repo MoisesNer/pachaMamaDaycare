@@ -131,25 +131,28 @@
                 </div>
             </nav>
                 /*NAVBAR ENDS*/
-            <section class="product-sample">
+            <section class="product-sample" id="close-popup" class="close-popup">
                 <div class="product-category">
                     <p class="category"><a href="#">Toys </a>| <a href="#">Building & Construction</a></p>
                 </div>
                 <div class="product-gallery">
                     <div class="gallery-img">
-                        <div class="main-img small-cont">
-                            <img src="/files/toddler-main.png" alt="main image">
-                        </div>
+                        <!--<div class="main-img small-cont"></div>-->
+                            <img id="main1" src="/files/toddler-main-big.png" alt="main image">
+                            <!--<img id="main2" style="visibility:hidden" src="/files/toddler-pic.png" alt="main image">-->
+                           <!--<img id="main3" src="/files/toddler-pic.png" alt="main image">-->
+                            <!--<img id="main4" src="/files/toddler-pic.png" alt="main image">-->
+                        <!--</div>-->
                         <div class="small-img">
-                            <div class="small-cont-1 small-cont">
-                                <img src="/files/toddler-pic.png" alt="main image">
-                            </div>
-                            <div class="small-cont-2 small-cont">
-                                <img src="/files/toddler-pic.png" alt="main image">
-                            </div>
-                            <div class="small-cont-3 small-cont">
-                                <img src="/files/toddler-pic.png" alt="main image">
-                            </div>
+                            <!--<div class="small-cont-1 small-cont">-->
+                                <img class="img-active" id="prod-1" src="/files/toddler-main-small.png" alt="main image">
+                           <!-- </div>
+                            <div class="small-cont-2 small-cont">-->
+                                <img id="prod-2" src="/files/toddler-main2.png" alt="product image 2">
+                           <!--</div>
+                            <div class="small-cont-3 small-cont">-->
+                                <img id="prod-3" src="/files/toddler2-small.png" alt="product image 3">
+                            <!--</div>-->
                         </div>
                     </div>
                     <div class="product-info">
@@ -233,7 +236,7 @@
                     </div>
                     <div class="cont-img">
                         <a href="product.html">
-                        <img src="files/toddler-main.png" alt="Product 1 picture">   
+                        <img src="files/toddler-main-big.png" alt="Product 1 picture">   
                         </a> 
                      </div>    
                     <div class="product-info">
@@ -346,6 +349,6 @@
         </div>
 
 </footer>
-                
+<script src="/app.js"></script>     
         </body>
    </html>
