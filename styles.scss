@@ -642,7 +642,12 @@ h2{
                             transition: transform 3s;
                             z-index: -1;
                         }
-                         
+                        #spike-pic{
+                            width:79%;
+                        }
+                        #munchkin-pic{
+                            width:58%;
+                        }
                      }
                      
                 
@@ -907,6 +912,7 @@ h2{
             .product-info{
                 width:45%;
                 padding:5px 20px;
+                overflow: hidden;
                 h1{
                     color:$-notBlack;
                     font-size:30px;
@@ -950,10 +956,14 @@ h2{
                 .spec{
                     margin-top:60px;
                     display:flex;
+                    overflow: hidden;
                     .color{
+                        overflow: hidden;
                         font-size:20px;
                         font-weight:550;
+                        
                     span{
+                        overflow: hidden;
                         height: 30px;
                         width: 30px;
                         border-radius: 50%;
@@ -964,31 +974,39 @@ h2{
                     .circle:hover{
                         height: 35px;
                         width: 35px; 
+                        overflow: hidden;
                     }
                     .circle:active{
                         height: 35px;
                         width: 35px; 
                         border:2px solid black;
+                        overflow: hidden;
                     }
                     .circle:focus{
                         height: 35px;
                         width: 35px; 
                         border:2px solid black;
+                        overflow: hidden;
                     }
                     .circle1{
+                        overflow: hidden;
                         background-color:#EF0000;
                     }
                     .circle2{
+                        overflow: hidden;
                         background-color:#18D870;
                     }
                     .circle3{
+                        overflow: hidden;
                         background-color:#D818A4;
                     }
                     .circle4{
+                        overflow: hidden;
                         background-color:#3D18D8;
                     }
                 }      
                 .quantity{
+                    overflow: hidden;
                     margin-left:136px;
                     p{
                         font-size:20px;
@@ -1098,11 +1116,12 @@ h2{
         flex-direction:column;
         justify-content:center;
         
-        h4{
+        #similar-heading{
             width:85%;
             padding-top:30px;
             font-size:25px;
             margin:auto;
+            border-bottom: $-pink solid 5px;
         }
         .featured-product{
             display: flex;

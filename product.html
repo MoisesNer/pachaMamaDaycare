@@ -19,75 +19,117 @@
 </head>
     <body>
     <!-- NAVBAR -->
-        <nav>
-            <div class="nav-section">
-            <div class="logoNav">
-                <a href="index.html"><img src="/files/MamaPachaLogoWeb.png" alt="" class="navImg"></a>
-            </div>
-
-            <div class="burguerMenu">
-                <div class="line"></div>
-                <div class="line"></div>
-                <div class="line"></div>
-            </div>
-
-
-            <ul class="nav-ul">
-                <li>
-                    <a href="#" id="open-popup" class="open-popup">Products</a>
-                </li>
-                <li>
-                    <a href="#">About</a>
-                </li>
-                <li>
-                    <a href="#">Contact</a>
-                </li>
-            </ul>
+    <nav>
+        <div class="nav-section">
+          <div class="burguerMenu">
+              <!-- Top Navigation Menu -->
+              <div class="topnav">
+                  <div id="myLinks">
+                  <a href="#product">Product</a>
+                  <ul>
+                      <li>Decor</li>
+                      <li>Furniture</li>
+                      <li id="toys" class="toys">Toys</li>
+                      <ul>
+                          <li id="sub" class="sub">Building & Construction</li>
+                          <li id="sub" class="sub">Craft & Art</li>
+                              <li id="sub" class="sub">Learning & Education</li>
+                              <li id="sub" class="sub">Music</li>
+                              <li id="sub" class="sub">Science</li>
+                          </ul>
+                      
+                       <li>Teacher Resources</li>
+                      
+  
+                  </ul>
+                  <a href="#about">About</a>
+                  <a href="#contact">Contact</a>
+                  </div>
+                  <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                  <i class="fa fa-bars"></i>
+                  </a>
+              </div>
+  
+              <!--<div class="line"><a class="menuLink" href="#">Products</a></div>
+              <div class="line"><a class="menuLink" href="#">About</a></div>
+              <div class="line"><a class="menuLink" href="#">Contact</a></div>-->
+              <a href="#" class="icon menuLink">
+                  <i class="fa fa-bars"></i>
+                </a>
+          </div>
+        <div class="logoNav">
+            <a href="index.html"><img src="/files/MamaPachaLogoWeb.png" alt="" class="navImg"></a>
         </div>
-
-            <ul class="nav-icons">
-                <li>
-                    <a href="" class="search"><i class="fas fa-search"></i></a>
-                    
-                </li>
-                <li>
-                    <a href="" class="account"><i class="fas fa-user"></i></a>               
-                </li>
-                <li>
-                    <a href="#" class="cart btn-open-popup" id="btn-open-popup"><i class="fas fa-shopping-cart"></i></a>
-                </li>
-            </ul>
-            <div class="submenu" id="submenu">
-                <div class="pops" id="pops">
-                   <!-- <a href="#" id="close-popup" class="close-popup"><i class="fas fa-times"></i></a>-->
-                    <ul id="close-popup" class="close-popup">
-                        <li>Decor</li>
-                        <li>Furniture</li>
+  
+  
+        <ul class="nav-ul">
+            <li>
+                <a href="#" id="open-popup" class="open-popup" target="_self">Products</a>
+            </li>
+            <li>
+                <a href="#">About</a>
+            </li>
+            <li>
+                <a href="#">Contact</a>
+            </li>
+        </ul>
+    </div>
+  
+        <ul class="nav-icons">
+            <li>
+                <a href="" class="search"><i class="fas fa-search"></i></a>
+                
+            </li>
+            <li>
+                <a href="" class="account"><i class="fas fa-user"></i></a>               
+            </li>
+            <li>
+                <a href="#" class="cart btn-open-popup" id="btn-open-popup"><i class="fas fa-shopping-cart"></i></a>
+            </li>
+        </ul>
+        <div class="submenu" id="submenu">
+            <div class="pops" id="pops">
+               <!-- <a href="#" id="close-popup" class="close-popup"><i class="fas fa-times"></i></a>-->
+                <ul>
+                    <li>Decor</li>
+                </ul>
+                <ul>
+                    <li>Furniture</li>
+                </ul>
+                    <ul >
+                        <li id="toys" class="toys">Toys</li>
+                        <li id="sub" class="sub">Building & Construction</li>
+                        <li id="sub" class="sub">Craft & Art</li>
+                        <li id="sub" class="sub">Learning & Education</li>
+                        <li id="sub" class="sub">Music</li>
+                        <li id="sub" class="sub">Science</li>
                     </ul>
-                        <ul >
-                            <li id="toys" class="toys">Toys</li>
-                            <li id="sub" class="sub">Building & Construction</li>
-                            <li id="sub" class="sub">Craft & Art</li>
-                            <li id="sub" class="sub">Learning & Education</li>
-                            <li id="sub" class="sub">Music</li>
-                            <li id="sub" class="sub">Science</li>
-                        </ul>
-                    <ul>
-                        <li>Teacher Resources</li>
-                    </ul>
-                    
-                </div>
+                <ul>
+                    <li>Teacher Resources</li>
+                </ul>
+                
             </div>
-                    <!-- <button id="btn-abrir-popup" class="btn-abrir-popup">Abrir Ventana Emergente</button>-->
-                    <div class="overlay" id="overlay">
-                        <div class="popup" id="popup">
-                            <a href="#" id="btn-close-popup" class="btn-close-popup"><i class="fas fa-times"></i></a>
-                            <p class="my-cart">My Cart</p>
-                            
-                        </div>
+        </div>
+                <!-- <button id="btn-abrir-popup" class="btn-abrir-popup">Abrir Ventana Emergente</button>-->
+                <div class="overlay" id="overlay">
+                    <div class="popup" id="popup">
+                        <a href="#" id="btn-close-popup" class="btn-close-popup" target="_self"><i class="fas fa-times"></i></a>
+                        <p class="my-cart">My Cart</p>
+                        <p class="cartLegend totalAmount" id="totalAmount">Total: $ <span id="cart-total">00.00</span> / Remove item<i class='fas fa-trash trashAll' id="trashAll"></i></p>
+                        <p class="cartLegend" id="cartLegend">There is nothing in your Cart, select how many items you want and press the cart item to add them here!</p> 
+                        <!-- TEST delete from here -->
+                        <div class="cartItem">
+                          <p class="pItem">$1 item(s)</p>
+                          <p> Item Name</p>
+                          <p>$ 199.5</p>                      
+                          <a href="#" class="cart-item-remove tOne" id='trashOne'>
+                            <i class="fas fa-backspace"></i>
+                          </a>
+                        </div>               
+                        <!--TEST  until here -->
                     </div>
-                </nav>
-
+                </div>
+            </nav>
                 /*NAVBAR ENDS*/
             <section class="product-sample">
                 <div class="product-category">
@@ -95,17 +137,17 @@
                 </div>
                 <div class="product-gallery">
                     <div class="gallery-img">
-                        <div class=main-img>
+                        <div class="main-img small-cont">
                             <img src="/files/toddler-main.png" alt="main image">
                         </div>
                         <div class="small-img">
-                            <div class="small-cont">
+                            <div class="small-cont-1 small-cont">
                                 <img src="/files/toddler-pic.png" alt="main image">
                             </div>
-                            <div class="small-cont">
+                            <div class="small-cont-2 small-cont">
                                 <img src="/files/toddler-pic.png" alt="main image">
                             </div>
-                            <div class="small-cont">
+                            <div class="small-cont-3 small-cont">
                                 <img src="/files/toddler-pic.png" alt="main image">
                             </div>
                         </div>
@@ -170,7 +212,7 @@
                     <p class="last-p"><span class="h-weight">DURABLE WOODEN CONSTRUCTION: </span> This wooden toy set with mallet is made 
                         from high-quality materials. The built-in pegs are non-removable, and each component is made
                          from solid wood – for superior strength and longevity</p>
-                    <hr class="turquoise-line">
+                    <!--<hr class="turquoise-line">-->
                     <h4 class="heading-size">Product Size</h4>
                     <p class="product-size">Item Dimensions LxWxH: 26 x 13.5 x 13.5 centimeters</p>
                     </div>
@@ -178,86 +220,94 @@
 
 
             <section class="similar">
-                <h4>Similar products</h4>
-                
-    
+                <h4 id="similar-heading">Similar products</h4>
                   
-                <div class="featured-product">
+                  <!-- FEATURED PRODUCTS -->
+    <section class="featuredProducts">
+        
+        <div class="featured-product">
 
-                    <div class="product-container">
-                        <div class="category">
-                            <a href="#">Craft & Art</a>
-                        </div>
+                <div class="product-container">
+                    <div class="category">
+                        <a href="#">Craft & Art</a>
+                    </div>
+                    <div class="cont-img">
                         <a href="product.html">
-                          <img src="files/toddler-main.png" alt="Product 1 picture">   
-                        </a>     
-                        <div class="product-info">
-                            <div>
-                                <!-- from here -->
-                                <h5 id="artName">Pounding Bench Wooden Toy</h5>
-                            </div>
-                            <div class="price-qty">
-                                <h5 id="price">$19.95</h5>
-                                <form action="">
-    
-                                  <input type="text" id="Qty-1" placeholder="Qty">
-                                  <p>
-                                        <a id="AddCart" class="fas fa-shopping-cart"></a>
-                                    </p>
-                                    <!-- til here -->
-                                </form>
-                            </div>
+                        <img src="files/toddler-main.png" alt="Product 1 picture">   
+                        </a> 
+                     </div>    
+                    <div class="product-info">
+                        <div>
+                            <h5 id="artName">Pounding Bench Wooden Toy</h5>
+                        </div>
+                        <div class="price-qty">
+                            <h5 id="price" class="price-item">$19.95</h5>
+                            <form action="">
+                              <input type="text" class="qty" id="qty7" placeholder="Qty" onkeydown="return (event.keyCode!=13);">
+                                <p>
+                                    <a id="AddCart" class="fas fa-shopping-cart add-cart"></a>
+                                </p>
+                            </form>
                         </div>
                     </div>
-    
-    
-                    <div class="product-container">
-                        <div class="category">
-                            <a href="#">Learning & Education</a>
+                </div>
+
+                <div class="product-container">
+                    <div class="category">
+                        <a href="#">Learning & Education</a>
+                    </div>
+                    <div class="cont-img">
+                    <a href="product.html">
+                      <img src="/files/products/Screen Shot 2021-02-10 at 11.16.09 AM.png" alt="Product 1 picture">   
+                    </a> 
+                     </div>    
+                    <div class="product-info">
+                        <div>
+                            <h5 id="artName">JoinJoy Kitchen</h5>
                         </div>
-                        <a href="product.html">
-                          <img src="/files/products/Screen Shot 2021-02-10 at 11.16.09 AM.png" alt="Product 1 picture">   
-                        </a>     
-                        <div class="product-info">
-                            <div>
-                                <h5>JoinJoy Kitchen</h5>
-                            </div>
-                            <div class="price-qty">
-                                <h5>$33.33</h5>
-                                <form action="">
-                                    <input type="text" id="qty-2" placeholder="Qty">
-                                    <p>
-                                        <a class="fas fa-shopping-cart"></a>
-                                    </p>
-                                </form>
-                            </div>
+                        <div class="price-qty">
+                            <h5 id="price" class="price-item">$33.33</h5>
+                            <form action="">
+                                <input type="text" class="qty" id="qty8" placeholder="Qty" onkeydown="return (event.keyCode!=13);">
+                                <p>
+                                    <a id="AddCart" class="fas fa-shopping-cart add-cart"></a>
+                                </p>
+                            </form>
                         </div>
                     </div>
-                    <div class="product-container">
-                        <div class="category">
-                            <a href="#">Learning & Education</a>
-                        </div>
+                </div>
+
+
+                
+                <div class="product-container product-container3">
+                    <div class="category">
+                        <a href="#">Learning & Education</a>
+                    </div>
+                    <div class="cont-img">
                         <a href="product.html">
-                          <img src="/files/products/Screen Shot 2021-02-10 at 11.16.30 AM.png" alt="Product 1 picture">   
-                        </a>     
-                        <div class="product-info">
-                            <div>
-                                <h5>Holy Stone Car</h5>
-                            </div>
-                            <div class="price-qty">
-                                <h5>$26.99</h5>
-                                <form action="">
-                                    <input type="text" id="qty-4" placeholder="Qty">
-                                    <p>
-                                        <a class="fas fa-shopping-cart"></a>
-                                    </p>
-                                </form>
-                            </div>
+                        <img src="/files/products/Screen Shot 2021-02-10 at 11.16.30 AM.png" alt="Product 1 picture">   
+                        </a> 
+                    </div>    
+                    <div class="product-info">
+                        <div>
+                            <h5 id="artName">Holy Stone Car</h5>
+                        </div>
+                        <div class="price-qty">
+                            <h5 id="price" class="price-item">$26.99</h5>
+                            <form action="">
+                                <input type="text" class="qty" id="qty9" placeholder="Qty" onkeydown="return (event.keyCode!=13);">
+                                <p>
+                                    <a id="AddCart" class="fas fa-shopping-cart add-cart"></a>
+                                </p>
+                            </form>
                         </div>
                     </div>
-    
-                  
-            </div>
+                </div>
+
+              
+        </div>
+
+    </section>
 
             </section>
    <!-- FOOTER -->

@@ -747,6 +747,12 @@ h2 {
     transition: transform 3s, -webkit-transform 3s;
     z-index: -1;
   }
+  .latestProducts .latest-product .product-container .cont-img a #spike-pic {
+    width: 79%;
+  }
+  .latestProducts .latest-product .product-container .cont-img a #munchkin-pic {
+    width: 58%;
+  }
   .latestProducts .latest-product .product-container .product-info {
     border-top: solid #313131 2px;
     margin: auto;
@@ -1017,6 +1023,7 @@ h2 {
   html .product-sample .product-info {
     width: 45%;
     padding: 5px 20px;
+    overflow: hidden;
   }
   html .product-sample .product-info h1 {
     color: #313131;
@@ -1061,12 +1068,15 @@ h2 {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    overflow: hidden;
   }
   html .product-sample .product-info .spec .color {
+    overflow: hidden;
     font-size: 20px;
     font-weight: 550;
   }
   html .product-sample .product-info .spec .color span {
+    overflow: hidden;
     height: 30px;
     width: 30px;
     border-radius: 50%;
@@ -1078,30 +1088,38 @@ h2 {
   html .product-sample .product-info .spec .color .circle:hover {
     height: 35px;
     width: 35px;
+    overflow: hidden;
   }
   html .product-sample .product-info .spec .color .circle:active {
     height: 35px;
     width: 35px;
     border: 2px solid black;
+    overflow: hidden;
   }
   html .product-sample .product-info .spec .color .circle:focus {
     height: 35px;
     width: 35px;
     border: 2px solid black;
+    overflow: hidden;
   }
   html .product-sample .product-info .spec .color .circle1 {
+    overflow: hidden;
     background-color: #EF0000;
   }
   html .product-sample .product-info .spec .color .circle2 {
+    overflow: hidden;
     background-color: #18D870;
   }
   html .product-sample .product-info .spec .color .circle3 {
+    overflow: hidden;
     background-color: #D818A4;
   }
   html .product-sample .product-info .spec .color .circle4 {
+    overflow: hidden;
     background-color: #3D18D8;
   }
   html .product-sample .product-info .spec .quantity {
+    overflow: hidden;
     margin-left: 136px;
   }
   html .product-sample .product-info .spec .quantity p {
@@ -1215,11 +1233,12 @@ h2 {
         -ms-flex-pack: center;
             justify-content: center;
   }
-  html .similar h4 {
+  html .similar #similar-heading {
     width: 85%;
     padding-top: 30px;
     font-size: 25px;
     margin: auto;
+    border-bottom: #DF1988 solid 5px;
   }
   html .similar .featured-product {
     display: -webkit-box;
